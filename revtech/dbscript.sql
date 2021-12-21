@@ -16,6 +16,9 @@ VALUES('manager@email.com', 123456, 'Jane', 'Doe', 'California', '555-555-5555',
 INSERT INTO user_details(user_email, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed) 
 VALUES('employee@email.com', 123456, 'John', 'Doe', 'California', '555-555-5555', 'Employee', FALSE);
 
+INSERT INTO user_details(user_email, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed) 
+VALUES('customer@email.com', 123456, 'James', 'Doe', 'California', '555-555-5555', 'Customer', FALSE);
+
 CREATE TABLE product_details(
 product_id INT GENERATED ALWAYS AS IDENTITY,
 product_name VARCHAR(100),
