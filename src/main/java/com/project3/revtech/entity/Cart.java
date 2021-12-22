@@ -1,0 +1,67 @@
+package com.project3.revtech.entity;
+
+import java.util.Set;
+
+import javax.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
+@Entity
+@Table(name = "cart_details")
+public class Cart {
+	
+	@Id
+	@Column(name = "cart_id")
+	private int cartId;
+
+	@OneToOne(mappedBy = "cart")
+	private Transaction transaction;
+
+	@Column(name = "user_id")
+	private int userId;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "user_id", nullable = false, insertable = false, updatable = false)
+	private User user;
+
+	@OneToMany(mappedBy = "cart")
+	private Set<CartItem> cartItems;
+	
+	@Column(name = "cart_total")
+	private int cartTotal;
+
+	@Column(name = "cart_paid")
+	private boolean cartPaid;
+
+	@Column(name = "cart_removed")
+	private boolean cartRemoved;
+
+	public Cart(int cartId, Transaction transaction, int userId, User user, Set<CartItem> cartItems, int cartTotal,
+			boolean cartPaid, boolean cartRemoved) {
+		super();
+		this.cartId = cartId;
+		this.transaction = transaction;
+		this.userId = userId;
+		this.user = user;
+		this.cartItems = cartItems;
+		this.cartTotal = cartTotal;
+		this.cartPaid = cartPaid;
+		this.cartRemoved = cartRemoved;
+	}
+
+}
