@@ -52,6 +52,7 @@ public class Cart {
 	@Column(name = "cart_removed")
 	private boolean cartRemoved;
 
+	//This constructor will only be used for joined tables. Do not use
 	public Cart(int cartId, Transaction transaction, int userId, User user, List<CartItem> cartItems, int cartTotal,
 			boolean cartPaid, boolean cartRemoved) {
 		super();

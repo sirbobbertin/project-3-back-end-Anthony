@@ -21,6 +21,6 @@ INSERT INTO cart_details(user_id, cart_paid, cart_removed, cart_total) VALUES ( 
 
 INSERT INTO cart_items(cart_id, product_id, cart_qty) VALUES ( 1, 1, 2 );
 
--- INSERT INTO discount_details(product_id, discount_description, discount_percentage) VALUES ( 1, 'stuff', 20.5 );
+INSERT INTO discount_details(product_id, discount_description, discount_percentage) VALUES ( 1, 'stuff', 20.5 );
 
 
