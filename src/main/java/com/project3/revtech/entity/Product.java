@@ -2,6 +2,7 @@ package com.project3.revtech.entity;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -64,18 +65,18 @@ public class Product {
 	private String imageUrl;
 
 	@OneToMany(mappedBy = "product")
-	private Set<Image> images;
+	private List<Image> images;
 
 	@Column(name = "product_removed")
 	private boolean productRemoved;
 
 	@OneToMany(mappedBy = "product")
-	private Set<CartItem> cartItems;
+	private List<CartItem> cartItems;
 
 	public Product(int productId, Discount discount, @NotNull String productSku, @NotNull String productName,
 			@Min(1) @Min(1) BigDecimal productCost, @NotNull String productCategory, @NotNull String productDescription,
-			int productQty, @NotNull String imageUrl, Set<Image> images, boolean productRemoved,
-			Set<CartItem> cartItems) {
+			int productQty, @NotNull String imageUrl, List<Image> images, boolean productRemoved,
+			List<CartItem> cartItems) {
 		super();
 		this.productId = productId;
 		this.discount = discount;
@@ -91,4 +92,15 @@ public class Product {
 		this.cartItems = cartItems;
 	}
 
+	public Product(int productId, String productSku, String productName, BigDecimal productCost, String productCategory, String productDescription, int productQty, String imageUrl, boolean productRemoved) {
+		this.productId = productId;
+		this.productSku = productSku;
+		this.productName = productName;
+		this.productCost = productCost;
+		this.productCategory = productCategory;
+		this.productDescription = productDescription;
+		this.productQty = productQty;
+		this.imageUrl = imageUrl;
+		this.productRemoved = productRemoved;
+	}
 }

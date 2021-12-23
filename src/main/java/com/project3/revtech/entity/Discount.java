@@ -53,4 +53,19 @@ public class Discount {
 		this.discountPercentage = discountPercentage;
 	}
 
+	public Discount(int discountId, int productId, String discountDescription, BigDecimal discountPercentage) {
+		this.discountId = discountId;
+		this.productId = productId;
+		this.discountDescription = discountDescription;
+		this.discountPercentage = discountPercentage;
+	}
+
+	public Discount(boolean isNull) {
+		if(isNull) {
+			this.discountId = -1;
+			this.productId = -1;
+			this.discountDescription = "N/A";
+			this.discountPercentage = new BigDecimal("0.0123");
+		}
+	}
 }

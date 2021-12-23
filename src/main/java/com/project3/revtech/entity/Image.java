@@ -48,4 +48,9 @@ public class Image {
 		this.productId = productId;
 	}
 
+	public Image(int imageId, String imageUrl, int productId) {
+		this.imageId = imageId;
+		this.imageUrl = imageUrl;
+		this.productId = productId;
+	}
 }

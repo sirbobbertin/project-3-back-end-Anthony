@@ -50,4 +50,9 @@ public class Transaction {
 		this.cart = cart;
 	}
 
+	public Transaction(int transactionId, Timestamp transactionDate, int cartId) {
+		this.transactionId = transactionId;
+		this.transactionDate = transactionDate;
+		this.cartId = cartId;
+	}
 }
