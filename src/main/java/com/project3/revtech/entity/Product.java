@@ -33,8 +33,8 @@ public class Product {
 	@Column(name = "product_id")
 	private int productId;
 
-	@OneToOne(mappedBy = "product")
-	private Discount discount;
+	//@OneToOne(mappedBy = "product")
+	//private Discount discount;
 
 	@NotNull
 	@Column(name = "product_sku")
@@ -63,19 +63,42 @@ public class Product {
 	@Column(name = "image_url")
 	private String imageUrl;
 
-	@OneToMany(mappedBy = "product")
-	private Set<Image> images;
+	//@OneToMany(mappedBy = "product")
+	//private Set<Image> images;
 
 	@Column(name = "product_removed")
 	private boolean productRemoved;
 
-	@OneToMany(mappedBy = "product")
-	private Set<CartItem> cartItems;
+	public Product(int productId, String productSku, String productName, BigDecimal productCost,
+				   String productCategory, String productDescription, int productQty,
+				   String imageUrl, boolean productRemoved) {
 
+		this.productId = productId;
+		this.productSku = productSku;
+		this.productName = productName;
+		this.productCost = productCost;
+		this.productCategory = productCategory;
+		this.productDescription = productDescription;
+		this.productQty = productQty;
+		this.imageUrl = imageUrl;
+		this.productRemoved = productRemoved;
+	}
+
+
+
+
+	//-------James Temporary Fixed ---------------//
+
+
+	//@OneToMany(mappedBy = "product")
+	//private Set<CartItem> cartItems;
+
+
+	/*
 	public Product(int productId, Discount discount, @NotNull String productSku, @NotNull String productName,
 			@Min(1) @Min(1) BigDecimal productCost, @NotNull String productCategory, @NotNull String productDescription,
 			int productQty, @NotNull String imageUrl, Set<Image> images, boolean productRemoved,
-			Set<CartItem> cartItems) {
+				   Set<CartItem> cartItems) {
 		super();
 		this.productId = productId;
 		this.discount = discount;
@@ -90,5 +113,7 @@ public class Product {
 		this.productRemoved = productRemoved;
 		this.cartItems = cartItems;
 	}
+
+	 */
 
 }

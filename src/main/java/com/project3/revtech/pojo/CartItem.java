@@ -6,13 +6,13 @@ public class CartItem {
 	private int cartId;
 	private int productId;
 	private int cartQty;
-	private Product product;
+	private ProductPojo product;
 
 	public CartItem() {
 		super();
 	}
 
-	public CartItem(int cartItemId, int cartId, int productId, int cartQty, Product product) {
+	public CartItem(int cartItemId, int cartId, int productId, int cartQty, ProductPojo product) {
 		super();
 		this.cartItemId = cartItemId;
 		this.cartId = cartId;
@@ -53,11 +53,11 @@ public class CartItem {
 		this.cartQty = cartQty;
 	}
 
-	public Product getProduct() {
+	public ProductPojo getProduct() {
 		return product;
 	}
 
-	public void setProduct(Product product) {
+	public void setProduct(ProductPojo product) {
 		this.product = product;
 	}
 

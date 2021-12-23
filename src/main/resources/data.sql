@@ -40,3 +40,13 @@ values (1, 'http://pexels.com/img23', 'Gaming Chairs', 234.89,
  values (2, 'http://pexels.com/img12', 'Gaming Chairs', 134.79,
  'New gaming chair ever. You can play all day long & will never get body ache. Its for the real gamer',
  'New XBlaster Chair', 5, false, 'A0XB34GNEWC00234');
+
+ insert into product_details(product_id, image_url, product_category, product_cost,
+  product_description, product_name, product_qty, product_removed, product_sku)
+  values (3, 'http://pexels.com/img78', 'Head Phones', 300.12, 'Great for music lovers, Noise Cancelling features better than Sony.',
+  'MPow-78', 2, false, 'BNH11R00234');
+
+   insert into product_details(product_id, image_url, product_category, product_cost,
+    product_description, product_name, product_qty, product_removed, product_sku)
+    values (4, 'http://pexels.com/img40', 'Head Phones', 350.21, 'Amazing Sound, bass etc, Noise Cancelling features better than  Apple.',
+    'MSound-79', 6, false, 'C09H11R00234');
