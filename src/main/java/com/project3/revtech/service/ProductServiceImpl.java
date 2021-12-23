@@ -95,4 +95,40 @@ public class ProductServiceImpl implements ProductService {
     }
 
     //------------Will add more custom methods below later if needed
+
+    @Override
+    public ProductPojo getADiscountProductService(int productId) throws ApplicationException {
+        ProductPojo productPojo = null;
+
+        Optional<Product> optional = this.productRepository.findById(productId);
+
+        if (optional.isPresent()) {
+            Product product = optional.get();
+            productPojo = new  ProductPojo(product.getProductId(), product.getProductSku(),
+                    product.getProductName(), product.getProductCost(),
+                    product.getProductCategory(), product.getProductDescription(),
+                    product.getProductQty(), product.getImageUrl(),
+                    product.isProductRemoved());
+        }
+        return  productPojo;
+    }
+
+    @Override
+    public List<ProductPojo> getAllDiscountProductService() throws ApplicationException {
+
+        List<Product> allProductEntity = this.productRepository.findAll();
+        List<ProductPojo> allProductPojo = new ArrayList<>();
+
+        allProductEntity.forEach((product) -> {
+            ProductPojo productPojo = new  ProductPojo(product.getProductId(), product.getProductSku(),
+                    product.getProductName(), product.getProductCost(),
+                    product.getProductCategory(), product.getProductDescription(),
+                    product.getProductQty(), product.getImageUrl(),
+                    product.isProductRemoved());
+            allProductPojo.add(productPojo);
+        });
+        return allProductPojo;
+    }
+
+
 }

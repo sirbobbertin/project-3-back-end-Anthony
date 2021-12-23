@@ -14,4 +14,9 @@ public interface ProductService {
 
     //------Will add more custom Product service methods ----------//
 
+    ProductPojo getADiscountProductService(int  productId) throws ApplicationException;
+    List<ProductPojo> getAllDiscountProductService() throws ApplicationException;
+
+
+
 }
