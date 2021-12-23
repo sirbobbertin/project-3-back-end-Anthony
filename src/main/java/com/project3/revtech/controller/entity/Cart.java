@@ -1,7 +1,6 @@
-package com.project3.revtech.entity;
+package com.project3.revtech.controller.entity;
 
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.Id;
 import javax.persistence.Column;

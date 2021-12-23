@@ -3,9 +3,9 @@ package com.project3.revtech.service;
 import javax.transaction.Transactional;
 
 import com.project3.revtech.dao.ProductRepository;
-import com.project3.revtech.entity.Product;
+import com.project3.revtech.controller.entity.Product;
 import com.project3.revtech.exception.ApplicationException;
-import com.project3.revtech.pojo.ProductPojo;
+import com.project3.revtech.aop.pojo.ProductPojo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +32,7 @@ public class ProductServiceImpl implements ProductService {
                 productPojo.getProductCategory(), productPojo.getProductDescription(),
                 productPojo.getProductQty(), productPojo.getImageUrl(),
                 productPojo.isProductRemoved()
+
                 //------Temporary fix for joins issues
                 // productPojo.setImages());productPojo.getDiscountId(),
                 //productPojo.getDiscountDescription(), productPojo.getDiscountPercentage(),

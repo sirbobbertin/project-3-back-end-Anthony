@@ -1,7 +1,7 @@
 package com.project3.revtech.controller;
 
 import com.project3.revtech.exception.ApplicationException;
-import com.project3.revtech.pojo.ProductPojo;
+import com.project3.revtech.aop.pojo.ProductPojo;
 import com.project3.revtech.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
