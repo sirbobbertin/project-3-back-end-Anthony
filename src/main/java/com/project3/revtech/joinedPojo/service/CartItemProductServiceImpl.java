@@ -1,4 +1,4 @@
-package com.project3.revtech.service;
+package com.project3.revtech.joinedPojo.service;
 
 import com.project3.revtech.dao.CartRepository;
 import com.project3.revtech.controller.entity.Cart;

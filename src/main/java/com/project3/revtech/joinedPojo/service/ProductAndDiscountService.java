@@ -1,4 +1,4 @@
-package com.project3.revtech.service;
+package com.project3.revtech.joinedPojo.service;
 
 import java.util.List;
 

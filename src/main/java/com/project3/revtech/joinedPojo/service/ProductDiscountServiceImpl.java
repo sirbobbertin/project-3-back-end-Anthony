@@ -1,4 +1,4 @@
-package com.project3.revtech.service;
+package com.project3.revtech.joinedPojo.service;
 
 import com.project3.revtech.dao.DiscountRepository;
 import com.project3.revtech.dao.ProductRepository;
@@ -44,6 +44,7 @@ public class ProductDiscountServiceImpl  implements ProductDiscountService{
                     product.getProductQty(),
                     product.getImageUrl(),
                     product.isProductRemoved(),
+
                     discount.getDiscountId(),
                     discount.getDiscountDescription(),
                     discount.getDiscountPercentage());
@@ -73,6 +74,7 @@ public class ProductDiscountServiceImpl  implements ProductDiscountService{
                 getAnewProduct.getProductQty(),
                 getAnewProduct.getImageUrl(),
                 getAnewProduct.isProductRemoved(),
+
                 discountedProduct.getDiscountId(),
                 discountedProduct.getDiscountDescription(),
                 discountedProduct.getDiscountPercentage());
