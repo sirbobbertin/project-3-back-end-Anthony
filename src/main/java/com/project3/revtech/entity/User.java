@@ -1,6 +1,6 @@
 package com.project3.revtech.entity;
 
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -30,7 +30,7 @@ public class User {
 	private int userId;
 
 	@OneToMany(mappedBy = "user")
-	private Set<Cart> carts;
+	private List<Cart> carts;
 
 	@NotNull
 	@Column(name = "user_email")
@@ -67,7 +67,7 @@ public class User {
 	@Column(name = "user_removed")
 	private boolean userRemoved;
 
-	public User(int userId, Set<Cart> carts, @NotNull String userEmail, @NotNull String userName,
+	public User(int userId, List<Cart> carts, @NotNull String userEmail, @NotNull String userName,
 			@NotNull String userPassword, @NotNull String userFirstName, @NotNull String userLastName,
 			@NotNull String userAddress, @NotNull String userContact, @NotNull String userType, boolean userRemoved) {
 		super();
@@ -84,4 +84,16 @@ public class User {
 		this.userRemoved = userRemoved;
 	}
 
+	public User(int userId, String userEmail, String userName, String userPassword, String userFirstName, String userLastName, String userAddress, String userContact, String userType, boolean userRemoved) {
+		this.userId = userId;
+		this.userEmail = userEmail;
+		this.userName = userName;
+		this.userPassword = userPassword;
+		this.userFirstName = userFirstName;
+		this.userLastName = userLastName;
+		this.userAddress = userAddress;
+		this.userContact = userContact;
+		this.userType = userType;
+		this.userRemoved = userRemoved;
+	}
 }
