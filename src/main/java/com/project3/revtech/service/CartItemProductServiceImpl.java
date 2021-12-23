@@ -9,16 +9,22 @@ import com.project3.revtech.joinedPojo.CartAndItemsPojo;
 import com.project3.revtech.joinedPojo.ItemProductDiscountPojo;
 import com.project3.revtech.joinedPojo.ProductAndDiscountPojo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
+@Transactional
 public class CartItemProductServiceImpl implements CartItemProductService {
 
     @Autowired
     CartRepository cartRepository;
 
-    @Override
+
+        @Override
     public CartAndItemsPojo getAllCartItemProducts(int cartId) {
 
         Cart cartEntity = cartRepository.getById(cartId);
@@ -28,6 +34,9 @@ public class CartItemProductServiceImpl implements CartItemProductService {
         for (CartItem tempItem : cartItems) {
             Product tempProduct = tempItem.getProduct();
             Discount tempDiscount = tempProduct.getDiscount();
+            if(tempDiscount == null) {
+                tempDiscount = new Discount(true);
+            }
             ProductAndDiscountPojo tempPAD = new ProductAndDiscountPojo(tempProduct.getProductId(), tempProduct.getProductSku(),
                                                                         tempProduct.getProductName(), tempProduct.getProductCost(), tempProduct.getProductCategory(),
                                                                         tempProduct.getProductDescription(), tempProduct.getProductQty(), tempProduct.getImageUrl(),

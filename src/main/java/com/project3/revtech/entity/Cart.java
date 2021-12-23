@@ -65,4 +65,11 @@ public class Cart {
 		this.cartRemoved = cartRemoved;
 	}
 
+	public Cart(int cartId, int userId, int cartTotal, boolean cartPaid, boolean cartRemoved) {
+		this.cartId = cartId;
+		this.userId = userId;
+		this.cartTotal = cartTotal;
+		this.cartPaid = cartPaid;
+		this.cartRemoved = cartRemoved;
+	}
 }

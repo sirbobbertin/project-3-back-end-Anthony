@@ -84,4 +84,16 @@ public class User {
 		this.userRemoved = userRemoved;
 	}
 
+	public User(int userId, String userEmail, String userName, String userPassword, String userFirstName, String userLastName, String userAddress, String userContact, String userType, boolean userRemoved) {
+		this.userId = userId;
+		this.userEmail = userEmail;
+		this.userName = userName;
+		this.userPassword = userPassword;
+		this.userFirstName = userFirstName;
+		this.userLastName = userLastName;
+		this.userAddress = userAddress;
+		this.userContact = userContact;
+		this.userType = userType;
+		this.userRemoved = userRemoved;
+	}
 }

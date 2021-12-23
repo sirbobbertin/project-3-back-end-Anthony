@@ -91,4 +91,15 @@ public class Product {
 		this.cartItems = cartItems;
 	}
 
+	public Product(int productId, String productSku, String productName, BigDecimal productCost, String productCategory, String productDescription, int productQty, String imageUrl, boolean productRemoved) {
+		this.productId = productId;
+		this.productSku = productSku;
+		this.productName = productName;
+		this.productCost = productCost;
+		this.productCategory = productCategory;
+		this.productDescription = productDescription;
+		this.productQty = productQty;
+		this.imageUrl = imageUrl;
+		this.productRemoved = productRemoved;
+	}
 }

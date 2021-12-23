@@ -52,4 +52,10 @@ public class CartItem {
 		this.cartQty = cartQty;
 	}
 
+	public CartItem(int cartItemId, int cartId, int productId, int cartQty) {
+		this.cartItemId = cartItemId;
+		this.cartId = cartId;
+		this.productId = productId;
+		this.cartQty = cartQty;
+	}
 }
