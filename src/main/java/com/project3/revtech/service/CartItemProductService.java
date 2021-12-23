@@ -1,4 +1,4 @@
-package com.project3.revtech.joinedPojo.service;
+package com.project3.revtech.service;
 
 import com.project3.revtech.joinedPojo.CartAndItemsPojo;
 

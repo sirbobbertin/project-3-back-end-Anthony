@@ -1,7 +1,7 @@
-package com.project3.revtech.joinedPojo.service;
+package com.project3.revtech.service;
 
 import com.project3.revtech.exception.ApplicationException;
-import com.project3.revtech.pojo.ProductPojo;
+import com.project3.revtech.dao.pojo.ProductPojo;
 
 import java.util.List;
 
