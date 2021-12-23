@@ -1,5 +1,6 @@
 package com.project3.revtech.entity;
 
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Id;
@@ -40,7 +41,7 @@ public class Cart {
 	private User user;
 
 	@OneToMany(mappedBy = "cart")
-	private Set<CartItem> cartItems;
+	private List<CartItem> cartItems;
 	
 	@Column(name = "cart_total")
 	private int cartTotal;
@@ -51,7 +52,7 @@ public class Cart {
 	@Column(name = "cart_removed")
 	private boolean cartRemoved;
 
-	public Cart(int cartId, Transaction transaction, int userId, User user, Set<CartItem> cartItems, int cartTotal,
+	public Cart(int cartId, Transaction transaction, int userId, User user, List<CartItem> cartItems, int cartTotal,
 			boolean cartPaid, boolean cartRemoved) {
 		super();
 		this.cartId = cartId;

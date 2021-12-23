@@ -1,18 +1,18 @@
-package com.project3.revtech.pojo;
+package com.project3.revtech.joinedPojo;
 
-
-public class CartItemPojo {
-
+public class ItemProductDiscountPojo {
     private int cartItemId;
     private int cartId;
     private int productId;
     private int cartQty;
+    private ProductAndDiscountPojo productAndDiscount;
 
-    public CartItemPojo(int cartItemId, int cartId, int productId, int cartQty) {
+    public ItemProductDiscountPojo(int cartItemId, int cartId, int productId, int cartQty, ProductAndDiscountPojo productAndDiscount) {
         this.cartItemId = cartItemId;
         this.cartId = cartId;
         this.productId = productId;
         this.cartQty = cartQty;
+        this.productAndDiscount = productAndDiscount;
     }
 
     public int getCartItemId() {
@@ -47,13 +47,22 @@ public class CartItemPojo {
         this.cartQty = cartQty;
     }
 
+    public ProductAndDiscountPojo getProductAndDiscount() {
+        return productAndDiscount;
+    }
+
+    public void setProductAndDiscount(ProductAndDiscountPojo productAndDiscount) {
+        this.productAndDiscount = productAndDiscount;
+    }
+
     @Override
     public String toString() {
-        return "CartItemPojo{" +
+        return "ItemProductDiscountPojo{" +
                 "cartItemId=" + cartItemId +
                 ", cartId=" + cartId +
                 ", productId=" + productId +
                 ", cartQty=" + cartQty +
+                ", productAndDiscount=" + productAndDiscount +
                 '}';
     }
 }
