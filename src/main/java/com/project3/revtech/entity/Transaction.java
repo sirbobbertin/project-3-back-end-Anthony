@@ -1,4 +1,4 @@
-package com.project3.revtech.controller.entity;
+package com.project3.revtech.entity;
 
 import java.sql.Timestamp;
 
