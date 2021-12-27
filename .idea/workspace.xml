@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf2b11e2-8cee-4eb5-b98a-9759bbd37faa" name="Changes" comment="" />
+    <list default="true" id="cf2b11e2-8cee-4eb5-b98a-9759bbd37faa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/controller/StorageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/StorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/StorageService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +28,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.project3.revtech" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
