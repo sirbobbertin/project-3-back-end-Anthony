@@ -17,7 +17,6 @@ import java.util.Optional;
 @Transactional
 public class ProductServiceImpl implements ProductService {
 
-
     @Autowired
     ProductRepository productRepository;
 
@@ -31,12 +30,7 @@ public class ProductServiceImpl implements ProductService {
                 productPojo.getProductName(), productPojo.getProductCost(),
                 productPojo.getProductCategory(), productPojo.getProductDescription(),
                 productPojo.getProductQty(), productPojo.getImageUrl(),
-                productPojo.isProductRemoved()
-
-                //------Temporary fix for joins issues
-                // productPojo.setImages());productPojo.getDiscountId(),
-                //productPojo.getDiscountDescription(), productPojo.getDiscountPercentage(),
-        );
+                productPojo.isProductRemoved());
         //Entity Product object
         Product returnProduct = productRepository.saveAndFlush(newProduct);
         productPojo.setProductId(returnProduct.getProductId());
@@ -55,7 +49,6 @@ public class ProductServiceImpl implements ProductService {
         Product returnProduct = productRepository.save(updateProduct);
         return productPojo;
     }
-
     @Override
     public boolean deleteProductService(int productId) throws ApplicationException {
         this.productRepository.deleteById(productId);
@@ -65,9 +58,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ProductPojo getAProductService(int productId) throws ApplicationException {
         ProductPojo productPojo = null;
-
         Optional<Product> optional = this.productRepository.findById(productId);
-
         if (optional.isPresent()) {
             Product product = optional.get();
             productPojo = new  ProductPojo(product.getProductId(), product.getProductSku(),
@@ -83,7 +74,6 @@ public class ProductServiceImpl implements ProductService {
     public List<ProductPojo> getAllProductService() throws ApplicationException {
         List<Product> allProductEntity = this.productRepository.findAll();
         List<ProductPojo> allProductPojo = new ArrayList<>();
-
         allProductEntity.forEach((product) -> {
            ProductPojo productPojo = new  ProductPojo(product.getProductId(), product.getProductSku(),
                     product.getProductName(), product.getProductCost(),
@@ -96,13 +86,10 @@ public class ProductServiceImpl implements ProductService {
     }
 
     //------------Will add more custom methods below later if needed
-
     @Override
     public ProductPojo getADiscountProductService(int productId) throws ApplicationException {
         ProductPojo productPojo = null;
-
         Optional<Product> optional = this.productRepository.findById(productId);
-
         if (optional.isPresent()) {
             Product product = optional.get();
             productPojo = new  ProductPojo(product.getProductId(), product.getProductSku(),
@@ -116,10 +103,8 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<ProductPojo> getAllDiscountProductService() throws ApplicationException {
-
         List<Product> allProductEntity = this.productRepository.findAll();
         List<ProductPojo> allProductPojo = new ArrayList<>();
-
         allProductEntity.forEach((product) -> {
             ProductPojo productPojo = new  ProductPojo(product.getProductId(), product.getProductSku(),
                     product.getProductName(), product.getProductCost(),
@@ -130,6 +115,4 @@ public class ProductServiceImpl implements ProductService {
         });
         return allProductPojo;
     }
-
-
 }

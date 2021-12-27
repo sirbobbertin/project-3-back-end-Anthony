@@ -52,6 +52,11 @@ public class ProductController {
         return productService.getAllProductService();
     }
 
-    //-------Add more Specific ones  later for Discount table, Transaction/Payments table
+    //-------endpoints  only for Get one or ALl  DiscountProduct(s) - JoinPojo related
+    //  Get endPoint Api - List All discounted Products
+    // http://localhost:7777/api/alldiscountedproducts
+
+    //  Get endPoint Api - List One discounted Product
+    // http://localhost:7777/api/onediscountedproducts
 
 }

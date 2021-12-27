@@ -44,7 +44,6 @@ public class ProductDiscountServiceImpl  implements ProductDiscountService{
                     product.getProductQty(),
                     product.getImageUrl(),
                     product.isProductRemoved(),
-
                     discount.getDiscountId(),
                     discount.getDiscountDescription(),
                     discount.getDiscountPercentage());
@@ -74,7 +73,6 @@ public class ProductDiscountServiceImpl  implements ProductDiscountService{
                 getAnewProduct.getProductQty(),
                 getAnewProduct.getImageUrl(),
                 getAnewProduct.isProductRemoved(),
-
                 discountedProduct.getDiscountId(),
                 discountedProduct.getDiscountDescription(),
                 discountedProduct.getDiscountPercentage());
