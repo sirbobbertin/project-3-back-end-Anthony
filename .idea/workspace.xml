@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf2b11e2-8cee-4eb5-b98a-9759bbd37faa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/entity/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/entity/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/entity/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/entity/CartItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/CartItemProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/CartItemProductServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="cf2b11e2-8cee-4eb5-b98a-9759bbd37faa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +57,7 @@
       <workItem from="1640300785886" duration="582000" />
       <workItem from="1640538172742" duration="225000" />
       <workItem from="1640539791490" duration="7000" />
-      <workItem from="1640624769963" duration="1942000" />
+      <workItem from="1640624769963" duration="2291000" />
     </task>
     <servers />
   </component>
