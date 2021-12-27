@@ -106,4 +106,6 @@ public class CartItem {
 	public void setCartQty(int cartQty) {
 		this.cartQty = cartQty;
 	}
+	
+	
 }
