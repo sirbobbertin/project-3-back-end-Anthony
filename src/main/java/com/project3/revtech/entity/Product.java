@@ -102,4 +102,6 @@ public class Product {
 		this.imageUrl = imageUrl;
 		this.productRemoved = productRemoved;
 	}
+
+
 }
