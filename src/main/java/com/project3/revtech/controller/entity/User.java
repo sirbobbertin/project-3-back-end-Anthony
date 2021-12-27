@@ -1,4 +1,4 @@
-package com.project3.revtech.entity;
+package com.project3.revtech.controller.entity;
 
 import java.util.List;
 

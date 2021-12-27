@@ -1,8 +1,5 @@
-package com.project3.revtech.pojo;
+package com.project3.revtech.dao.pojo;
 
-import com.project3.revtech.entity.Product;
-
-import javax.persistence.*;
 import java.math.BigDecimal;
 
 public class DiscountPojo {

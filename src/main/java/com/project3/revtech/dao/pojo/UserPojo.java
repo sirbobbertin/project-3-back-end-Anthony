@@ -1,10 +1,4 @@
-package com.project3.revtech.pojo;
-
-import com.project3.revtech.entity.Cart;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import java.util.Set;
+package com.project3.revtech.dao.pojo;
 
 public class UserPojo {
 

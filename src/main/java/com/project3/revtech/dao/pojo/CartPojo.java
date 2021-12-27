@@ -1,8 +1,4 @@
-package com.project3.revtech.pojo;
-
-import com.project3.revtech.entity.CartItem;
-
-import java.util.Set;
+package com.project3.revtech.dao.pojo;
 
 public class CartPojo {
 
