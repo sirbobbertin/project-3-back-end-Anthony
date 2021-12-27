@@ -1,4 +1,4 @@
-package com.project3.revtech.controller.entity;
+package com.project3.revtech.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -106,4 +106,6 @@ public class CartItem {
 	public void setCartQty(int cartQty) {
 		this.cartQty = cartQty;
 	}
+	
+	
 }

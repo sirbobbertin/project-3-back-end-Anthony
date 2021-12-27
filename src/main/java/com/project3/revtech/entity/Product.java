@@ -1,4 +1,4 @@
-package com.project3.revtech.controller.entity;
+package com.project3.revtech.entity;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -102,4 +102,6 @@ public class Product {
 		this.imageUrl = imageUrl;
 		this.productRemoved = productRemoved;
 	}
+
+
 }
