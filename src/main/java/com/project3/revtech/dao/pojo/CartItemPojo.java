@@ -1,4 +1,4 @@
-package com.project3.revtech.pojo;
+package com.project3.revtech.dao.pojo;
 
 
 public class CartItemPojo {
