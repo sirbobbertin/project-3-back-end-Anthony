@@ -4,21 +4,22 @@ import com.project3.revtech.joinedPojo.CartAndItemsPojo;
 import com.project3.revtech.service.CartItemProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/test")
+@RequestMapping("api/cart-items")
 
 public class CartItemProductController {
 
     @Autowired
     CartItemProductServiceImpl cartItemProductService;
 
-    @GetMapping
-    CartAndItemsPojo getCart() {
+    @GetMapping("{bid}")
+    CartAndItemsPojo getCart(@PathVariable("bid") int cartId) {
         System.out.println("inside");
-        return cartItemProductService.getAllCartItemProducts(1);
+        return cartItemProductService.getAllCartItemProducts(cartId);
     }
 
 }
