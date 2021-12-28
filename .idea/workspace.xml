@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf2b11e2-8cee-4eb5-b98a-9759bbd37faa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/dao/pojo/CartItemPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/pojo/CartItemPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/dao/pojo/CartPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/pojo/CartPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/dao/pojo/DiscountPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/pojo/DiscountPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/dao/pojo/ImagePojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/pojo/ImagePojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/dao/pojo/ProductPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/pojo/ProductPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/dao/pojo/TransactionPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/pojo/TransactionPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/dao/pojo/UserPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/pojo/UserPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/RevtechApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/RevtechApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +58,7 @@
       <workItem from="1640538172742" duration="225000" />
       <workItem from="1640539791490" duration="7000" />
       <workItem from="1640624769963" duration="2291000" />
+      <workItem from="1640723834487" duration="35000" />
     </task>
     <servers />
   </component>
@@ -86,5 +75,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
