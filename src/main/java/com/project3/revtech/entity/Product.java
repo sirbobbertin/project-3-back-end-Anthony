@@ -3,7 +3,6 @@ package com.project3.revtech.entity;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -40,11 +39,11 @@ public class Product {
 	@NotNull
 	@Column(name = "product_sku")
 	private String productSku;
-	
+
 	@NotNull
 	@Column(name = "product_name")
 	private String productName;
-	
+
 	@Min(1)
 	@Column(name = "product_cost")
 	private BigDecimal productCost;
@@ -52,14 +51,14 @@ public class Product {
 	@NotNull
 	@Column(name = "product_category")
 	private String productCategory;
-	
+
 	@NotNull
 	@Column(name = "product_description")
 	private String productDescription;
 
 	@Column(name = "product_qty")
 	private int productQty;
-	
+
 	@NotNull
 	@Column(name = "image_url")
 	private String imageUrl;
@@ -74,9 +73,9 @@ public class Product {
 	private List<CartItem> cartItems;
 
 	public Product(int productId, Discount discount, @NotNull String productSku, @NotNull String productName,
-			@Min(1) @Min(1) BigDecimal productCost, @NotNull String productCategory, @NotNull String productDescription,
-			int productQty, @NotNull String imageUrl, List<Image> images, boolean productRemoved,
-			List<CartItem> cartItems) {
+				   @Min(1) BigDecimal productCost, @NotNull String productCategory, @NotNull String productDescription,
+				   int productQty, @NotNull String imageUrl, List<Image> images, boolean productRemoved,
+				   List<CartItem> cartItems, ArrayList<String> getImageUrls) {
 		super();
 		this.productId = productId;
 		this.discount = discount;
@@ -103,4 +102,6 @@ public class Product {
 		this.imageUrl = imageUrl;
 		this.productRemoved = productRemoved;
 	}
+
+
 }

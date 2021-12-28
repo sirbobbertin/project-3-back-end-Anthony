@@ -11,8 +11,8 @@ import com.project3.revtech.joinedPojo.ProductAndDiscountPojo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import javax.transaction.Transactional;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,10 +33,11 @@ public class CartItemProductServiceImpl implements CartItemProductService {
 
         for (CartItem tempItem : cartItems) {
             Product tempProduct = tempItem.getProduct();
-            Discount tempDiscount = tempProduct.getDiscount();
-            if(tempDiscount == null) {
-                tempDiscount = new Discount(true);
-            }
+            Discount tempDiscount = (tempProduct.getDiscount() == null ? new Discount(true) : tempProduct.getDiscount());
+
+//            if(tempDiscount == null) {
+//                tempDiscount = new Discount(true);
+//            }
             ProductAndDiscountPojo tempPAD = new ProductAndDiscountPojo(tempProduct.getProductId(), tempProduct.getProductSku(),
                                                                         tempProduct.getProductName(), tempProduct.getProductCost(), tempProduct.getProductCategory(),
                                                                         tempProduct.getProductDescription(), tempProduct.getProductQty(), tempProduct.getImageUrl(),

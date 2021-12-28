@@ -1,9 +1,5 @@
 package com.project3.revtech.pojo;
 
-import com.project3.revtech.entity.Cart;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.sql.Timestamp;
 
 public class TransactionPojo {

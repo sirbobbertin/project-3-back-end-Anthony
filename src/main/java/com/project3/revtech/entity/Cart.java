@@ -1,7 +1,6 @@
 package com.project3.revtech.entity;
 
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.Id;
 import javax.persistence.Column;
@@ -71,6 +70,70 @@ public class Cart {
 		this.userId = userId;
 		this.cartTotal = cartTotal;
 		this.cartPaid = cartPaid;
+		this.cartRemoved = cartRemoved;
+	}
+
+	public int getCartId() {
+		return cartId;
+	}
+
+	public void setCartId(int cartId) {
+		this.cartId = cartId;
+	}
+
+	public Transaction getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(Transaction transaction) {
+		this.transaction = transaction;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public List<CartItem> getCartItems() {
+		return cartItems;
+	}
+
+	public void setCartItems(List<CartItem> cartItems) {
+		this.cartItems = cartItems;
+	}
+
+	public int getCartTotal() {
+		return cartTotal;
+	}
+
+	public void setCartTotal(int cartTotal) {
+		this.cartTotal = cartTotal;
+	}
+
+	public boolean isCartPaid() {
+		return cartPaid;
+	}
+
+	public void setCartPaid(boolean cartPaid) {
+		this.cartPaid = cartPaid;
+	}
+
+	public boolean isCartRemoved() {
+		return cartRemoved;
+	}
+
+	public void setCartRemoved(boolean cartRemoved) {
 		this.cartRemoved = cartRemoved;
 	}
 }

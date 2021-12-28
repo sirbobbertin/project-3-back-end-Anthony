@@ -1,9 +1,5 @@
 package com.project3.revtech.pojo;
 
-import com.project3.revtech.entity.CartItem;
-
-import java.util.Set;
-
 public class CartPojo {
 
     private int cartId;

@@ -1,10 +1,5 @@
 package com.project3.revtech.pojo;
 
-import com.project3.revtech.entity.Product;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-
 public class ImagePojo {
 
     private int imageId;
