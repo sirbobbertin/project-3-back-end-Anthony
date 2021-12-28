@@ -2389,7 +2389,7 @@ java.lang.NullPointerException: Cannot invoke "com.project3.revtech.entity.Disco
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
 	at com.project3.revtech.service.CartItemProductServiceImpl$$EnhancerBySpringCGLIB$$2c9803f8.getAllCartItemProducts(<generated>)
-	at com.project3.revtech.controller.TestController.getCart(TestController.java:21)
+	at com.project3.revtech.controller.CartItemProductController.getCart(TestController.java:21)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
