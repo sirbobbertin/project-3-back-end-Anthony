@@ -1,4 +1,4 @@
-package com.project3.revtech.dao.pojo;
+package com.project3.revtech.pojo;
 
 import java.math.BigDecimal;
 

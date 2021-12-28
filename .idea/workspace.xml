@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf2b11e2-8cee-4eb5-b98a-9759bbd37faa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/controller/StorageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/StorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/StorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/dao/pojo/CartItemPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/pojo/CartItemPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/dao/pojo/CartPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/pojo/CartPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/dao/pojo/DiscountPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/pojo/DiscountPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/dao/pojo/ImagePojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/pojo/ImagePojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/dao/pojo/ProductPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/pojo/ProductPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/dao/pojo/TransactionPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/pojo/TransactionPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/dao/pojo/UserPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/pojo/UserPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/ProductServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +26,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="22hkN1J8SjqZl6wu5sJ2jg7kBVU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -27,6 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -35,17 +49,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RevtechApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="revtech" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.project3.revtech.RevtechApplication" />
@@ -83,6 +86,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
