@@ -22,7 +22,7 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@NoArgsConstructor
+// @NoArgsConstructor
 @ToString
 @Entity
 @Table(name = "product_details")
