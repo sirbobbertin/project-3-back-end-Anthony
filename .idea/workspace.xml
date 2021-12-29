@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b03f056f-3ae8-4035-a6f4-bdd2efd71706" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/spring-boot-logger.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/spring-boot-logger.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/TransactionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/TransactionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project3/revtech/service/TransactionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project3/revtech/service/CartItemProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project3/revtech/service/CartItemProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project3/revtech/service/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project3/revtech/service/CartServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2021-12-22.0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2021-12-23.0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2021-12-24.0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2021-12-26.0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2021-12-27.0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/spring-boot-logger.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +77,8 @@
       <updated>1640615036524</updated>
       <workItem from="1640615041463" duration="4193000" />
       <workItem from="1640713902948" duration="15000" />
-      <workItem from="1640719386413" duration="7881000" />
+      <workItem from="1640719386413" duration="8409000" />
+      <workItem from="1640791827231" duration="200000" />
     </task>
     <servers />
   </component>
