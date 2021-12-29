@@ -65,7 +65,7 @@ public class Discount {
 			this.discountId = -1;
 			this.productId = -1;
 			this.discountDescription = "N/A";
-			this.discountPercentage = new BigDecimal("0.0123");
+			this.discountPercentage = new BigDecimal("0.0");
 		}
 	}
 }
