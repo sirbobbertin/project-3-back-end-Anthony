@@ -24,11 +24,6 @@ import lombok.ToString;
 @Table(name = "image_details")
 public class Image {
 
-	public Image() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "image_id")
@@ -38,6 +33,27 @@ public class Image {
 	@Column(name = "image_url")
 	private String imageUrl;
 	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "product_id", nullable = false, insertable = false, updatable = false)
+	private Product product;
+
+	@Column(name = "product_id")
+	private int productId;
+
+	public Image(int imageId, @NotNull String imageUrl, Product product, int productId) {
+		super();
+		this.imageId = imageId;
+		this.imageUrl = imageUrl;
+		this.product = product;
+		this.productId = productId;
+	}
+
+	public Image(int imageId, String imageUrl, int productId) {
+		this.imageId = imageId;
+		this.imageUrl = imageUrl;
+		this.productId = productId;
+	}
+
 	public int getImageId() {
 		return imageId;
 	}
@@ -67,27 +83,6 @@ public class Image {
 	}
 
 	public void setProductId(int productId) {
-		this.productId = productId;
-	}
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "product_id", nullable = false, insertable = false, updatable = false)
-	private Product product;
-
-	@Column(name = "product_id")
-	private int productId;
-
-	public Image(int imageId, @NotNull String imageUrl, Product product, int productId) {
-		super();
-		this.imageId = imageId;
-		this.imageUrl = imageUrl;
-		this.product = product;
-		this.productId = productId;
-	}
-
-	public Image(int imageId, String imageUrl, int productId) {
-		this.imageId = imageId;
-		this.imageUrl = imageUrl;
 		this.productId = productId;
 	}
 }
