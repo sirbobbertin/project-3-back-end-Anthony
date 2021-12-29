@@ -1,15 +1,16 @@
 package com.project3.revtech.service;
 
 import com.project3.revtech.dao.CartRepository;
-import com.project3.revtech.controller.entity.Cart;
-import com.project3.revtech.controller.entity.CartItem;
-import com.project3.revtech.controller.entity.Discount;
-import com.project3.revtech.controller.entity.Product;
+import com.project3.revtech.entity.Cart;
+import com.project3.revtech.entity.CartItem;
+import com.project3.revtech.entity.Discount;
+import com.project3.revtech.entity.Product;
 import com.project3.revtech.joinedPojo.CartAndItemsPojo;
 import com.project3.revtech.joinedPojo.ItemProductDiscountPojo;
 import com.project3.revtech.joinedPojo.ProductAndDiscountPojo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
@@ -32,10 +33,8 @@ public class CartItemProductServiceImpl implements CartItemProductService {
 
         for (CartItem tempItem : cartItems) {
             Product tempProduct = tempItem.getProduct();
-            Discount tempDiscount = tempProduct.getDiscount();
-            if(tempDiscount == null) {
-                tempDiscount = new Discount(true);
-            }
+            Discount tempDiscount = (tempProduct.getDiscount() == null ? new Discount(true) : tempProduct.getDiscount());
+
             ProductAndDiscountPojo tempPAD = new ProductAndDiscountPojo(tempProduct.getProductId(), tempProduct.getProductSku(),
                                                                         tempProduct.getProductName(), tempProduct.getProductCost(), tempProduct.getProductCategory(),
                                                                         tempProduct.getProductDescription(), tempProduct.getProductQty(), tempProduct.getImageUrl(),
