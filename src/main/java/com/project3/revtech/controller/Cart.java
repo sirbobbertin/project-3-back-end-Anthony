@@ -1,5 +1,5 @@
 package com.project3.revtech.controller;
 
-public class StorageController {
+public class Cart {
 
 }
