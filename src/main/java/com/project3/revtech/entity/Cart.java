@@ -19,6 +19,7 @@ import lombok.ToString;
 
 @ToString
 @Entity
+@NoArgsConstructor
 @Table(name = "cart_details")
 public class Cart {
 	
