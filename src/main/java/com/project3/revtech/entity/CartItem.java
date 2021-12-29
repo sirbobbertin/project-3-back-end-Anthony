@@ -15,7 +15,6 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @ToString
 @Entity
 @Table(name = "cart_items")
