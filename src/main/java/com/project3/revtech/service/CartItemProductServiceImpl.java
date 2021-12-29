@@ -35,9 +35,6 @@ public class CartItemProductServiceImpl implements CartItemProductService {
             Product tempProduct = tempItem.getProduct();
             Discount tempDiscount = (tempProduct.getDiscount() == null ? new Discount(true) : tempProduct.getDiscount());
 
-//            if(tempDiscount == null) {
-//                tempDiscount = new Discount(true);
-//            }
             ProductAndDiscountPojo tempPAD = new ProductAndDiscountPojo(tempProduct.getProductId(), tempProduct.getProductSku(),
                                                                         tempProduct.getProductName(), tempProduct.getProductCost(), tempProduct.getProductCategory(),
                                                                         tempProduct.getProductDescription(), tempProduct.getProductQty(), tempProduct.getImageUrl(),
