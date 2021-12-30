@@ -17,9 +17,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter
-@Setter
-@NoArgsConstructor
+// @Getter
+// @Setter
+// @NoArgsConstructor
 @ToString
 @Entity
 @Table(name = "cart_details")
@@ -50,6 +50,10 @@ public class Cart {
 
 	@Column(name = "cart_removed")
 	private boolean cartRemoved;
+	
+	public Cart() {
+		super();
+	}
 
 	//This constructor will only be used for joined tables. Do not use
 	public Cart(int cartId, Transaction transaction, int userId, User user, List<CartItem> cartItems, int cartTotal,

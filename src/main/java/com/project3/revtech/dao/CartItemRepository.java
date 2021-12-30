@@ -8,6 +8,7 @@ import com.project3.revtech.entity.CartItem;
 @Repository
 public interface CartItemRepository extends JpaRepository<CartItem, Integer>{
 
-	
+    boolean existsByCartIdAndProductId(int cartId, int productId);
+	boolean existsByCartQtyIsLessThanAndCartIdAndProductId(int cartQty, int cartId, int productId);
 	
 }
