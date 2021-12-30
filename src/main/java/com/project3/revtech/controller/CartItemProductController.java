@@ -18,7 +18,6 @@ public class CartItemProductController {
 
     @GetMapping("{bid}")
     CartAndItemsPojo getCart(@PathVariable("bid") int cartId) {
-        System.out.println("inside");
         return cartItemProductService.getAllCartItemProducts(cartId);
     }
 

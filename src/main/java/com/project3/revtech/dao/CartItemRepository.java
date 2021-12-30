@@ -10,5 +10,6 @@ public interface CartItemRepository extends JpaRepository<CartItem, Integer>{
 
     boolean existsByCartIdAndProductId(int cartId, int productId);
 	boolean existsByCartQtyIsLessThanAndCartIdAndProductId(int cartQty, int cartId, int productId);
+    CartItem findByCartIdAndProductId(int cartId, int productId);
 	
 }
