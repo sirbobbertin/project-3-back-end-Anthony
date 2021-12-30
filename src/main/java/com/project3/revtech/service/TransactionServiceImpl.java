@@ -46,7 +46,7 @@ public class TransactionServiceImpl implements TransactionService{
 
 	@Override
 	public List<TransactionPojo> findAllTransactionsInCart(int cartId) {
-		List<Transaction> allTransactionsEntity = this.TR.findAllTransactionsForCart(cartId);
+		List<Transaction> allTransactionsEntity = this.TR.findAllByCartId(cartId);
 		List<TransactionPojo> allTransactionsPojo = new LinkedList<TransactionPojo>();
 		
 		allTransactionsEntity.forEach((transaction) -> {
