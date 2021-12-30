@@ -1,12 +1,6 @@
 package com.project3.revtech.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,6 +21,7 @@ public class CartItem {
 	}
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "cart_item_id")
 	private int cartItemId;
 	
@@ -107,6 +102,11 @@ public class CartItem {
 
 	public CartItem(int cartItemId, int cartId, int productId, int cartQty) {
 		this.cartItemId = cartItemId;
+		this.cartId = cartId;
+		this.productId = productId;
+		this.cartQty = cartQty;
+	}
+	public CartItem( int cartId, int productId, int cartQty) {
 		this.cartId = cartId;
 		this.productId = productId;
 		this.cartQty = cartQty;

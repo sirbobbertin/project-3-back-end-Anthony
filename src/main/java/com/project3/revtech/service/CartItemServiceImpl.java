@@ -18,10 +18,16 @@ public class CartItemServiceImpl implements CartItemService{
 
     @Override
     public CartItemPojo addItem(CartItemPojo item) throws ApplicationException {
+        if(item.getCartQty() < 1) {
+            item.setCartItemId(-1);
+            return item;
+        }
         if(this.checkIfExistsInCart(item.getCartId(), item.getProductId())) {
+            CartItem existingItem = cartItemRepository.findByCartIdAndProductId(item.getCartId(), item.getProductId());
+            item.setCartItemId(existingItem.getCartItemId());
             return this.updateItem(item);
         } else {
-            CartItem itemEntity = new CartItem(item.getCartItemId(), item.getCartId(), item.getProductId(), item.getCartQty());
+            CartItem itemEntity = new CartItem( item.getCartId(), item.getProductId(), item.getCartQty());
             CartItem returningItem = cartItemRepository.saveAndFlush(itemEntity);
             item.setCartItemId(returningItem.getCartItemId());
         }
@@ -30,11 +36,15 @@ public class CartItemServiceImpl implements CartItemService{
 
     @Override
     public CartItemPojo updateItem(CartItemPojo item) throws ApplicationException {
-        if(this.checkIfNoQty(item.getCartId(), item.getProductId())) {
+        CartItem existingItem = cartItemRepository.findByCartIdAndProductId(item.getCartId(), item.getProductId());
+        if(existingItem == null) return addItem(item);
+        item.setCartItemId(existingItem.getCartItemId());
+        if(this.checkIfNoQty(item.getCartId(), item.getProductId()) || item.getCartQty() < 1) {
             this.removeItem(item.getCartItemId());
             item.setCartItemId(-1);
         } else {
             CartItem itemEntity = new CartItem(item.getCartItemId(), item.getCartId(), item.getProductId(), item.getCartQty());
+//            CartItem returningItem = cartItemRepository.
             CartItem returningItem = cartItemRepository.save(itemEntity);
         }
 
