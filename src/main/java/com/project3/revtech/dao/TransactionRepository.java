@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface TransactionRepository extends JpaRepository<Transaction, Integer> {
 
-	@Query("select * from transaction_details where cart_id = ?1")
+	@Query("select * from transaction_details where cart_id = ?")
 	List<Transaction> findAllTransactionsForCart(Integer cartId);
 	
 	
