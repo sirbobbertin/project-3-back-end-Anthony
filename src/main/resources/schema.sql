@@ -28,8 +28,7 @@ image_id INT GENERATED ALWAYS AS IDENTITY,
 product_id INT,
 image_url VARCHAR,
 PRIMARY KEY(image_id),
-FOREIGN KEY(product_id)
-REFERENCES product_details(product_id) ON DELETE CASCADE);
+FOREIGN KEY(product_id) REFERENCES product_details(product_id) ON DELETE CASCADE);
 
 CREATE TABLE cart_details(
 cart_id INT GENERATED ALWAYS AS IDENTITY,
