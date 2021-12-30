@@ -33,6 +33,20 @@ public class CartServiceImpl implements CartService {
     }
 
     @Override
+    public CartPojo getCart(int cartId) throws ApplicationException {
+        Cart cartEntity =  cartRepository.findByCartId(cartId);
+        CartPojo cart = new CartPojo(cartEntity.getCartId(), cartEntity.getUserId(), cartEntity.getCartTotal(), cartEntity.isCartPaid(), cartEntity.isCartRemoved());
+        return cart;
+    }
+
+    @Override
+    public CartPojo getCartByUserId(int userId) throws ApplicationException {
+        Cart cartEntity =  cartRepository.findByUserId(userId);
+        CartPojo cart = new CartPojo(cartEntity.getCartId(), cartEntity.getUserId(), cartEntity.getCartTotal(), cartEntity.isCartPaid(), cartEntity.isCartRemoved());
+        return cart;
+    }
+
+    @Override
     public boolean removeCart(CartPojo cart) throws ApplicationException {
         cartRepository.deleteById(cart.getCartId());
         return true;

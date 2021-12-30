@@ -16,9 +16,14 @@ public class CartItemProductController {
     @Autowired
     CartItemProductServiceImpl cartItemProductService;
 
-    @GetMapping("{bid}")
+    @GetMapping("cart/{bid}")
     CartAndItemsPojo getCart(@PathVariable("bid") int cartId) {
         return cartItemProductService.getAllCartItemProducts(cartId);
+    }
+
+    @GetMapping("user/{bid}")
+    CartAndItemsPojo getCartByUser(@PathVariable("bid") int userId) {
+        return cartItemProductService.getAllCartItemProductsForUser(userId);
     }
 
 }
