@@ -51,8 +51,8 @@ values (1, 'http://pexels.com/img23', 'Gaming Chairs', 234.89,
     values (4, 'http://pexels.com/img40', 'Head Phones', 350.21, 'Amazing Sound, bass etc, Noise Cancelling features better than  Apple.',
     'MSound-79', 6, false, 'C09H11R00234');
 
--- INSERT INTO product_details(product_name, product_cost, product_category, product_description, product_sku, product_qty, image_url, product_removed)
--- VALUES('iphone 13 Pro MAX', 99.95, 'PHONES', 'The newest iphone - 6.7 inch display', 'XXXXXX', 4, '_PHOTO_PLACE_HOLDER_', FALSE);
+INSERT INTO product_details(product_name, product_cost, product_category, product_description, product_sku, product_qty, image_url, product_removed)
+VALUES('iphone 13 Pro MAX', 99.95, 'PHONES', 'The newest iphone - 6.7 inch display', 'XXXXXX', 4, '_PHOTO_PLACE_HOLDER_', FALSE);
 --
 -- INSERT INTO product_details(product_name, product_cost, product_category, product_description, product_sku, product_qty, image_url, product_removed)
 -- VALUES('iphone X Pro MAX', 50.95, 'PHONES', 'not newest iphone - 5.9 inch display', 'XXXXXX', 4, '_PHOTO_PLACE_HOLDER_', FALSE);
