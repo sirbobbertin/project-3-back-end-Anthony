@@ -1,6 +1,7 @@
 package com.project3.revtech.controller;
 
 import java.util.List;
+import java.util.ArrayList;
 
 import javax.validation.Valid;
 
@@ -31,12 +32,12 @@ public class TransactionController {
 	}
 	
 	@GetMapping("transaction/{tid}")
-	public TransactionPojo getTransactionById(@PathVariable Integer transactionId) {
+	public TransactionPojo getTransactionById(@PathVariable int transactionId) {
 		return TSI.getTransactionById(transactionId);
 	}
 	
 	@GetMapping("transaction/cart/{cid}")
-	public List<TransactionPojo> getCartTransactions(@PathVariable Integer cartId) {
+	public List<TransactionPojo> getCartTransactions(@PathVariable int cartId) {
 		return TSI.findAllTransactionsInCart(cartId);
 	}
 	

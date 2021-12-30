@@ -27,4 +27,5 @@ public class DiscountedProductController {
         return productDiscountService.getAllDiscountedProducts();
     }
 
+
 }
