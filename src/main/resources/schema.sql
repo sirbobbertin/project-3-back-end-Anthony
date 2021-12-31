@@ -9,7 +9,6 @@ address VARCHAR,
 first_name VARCHAR,
 last_name VARCHAR,
 contact VARCHAR,
-user_removed BOOLEAN,
 CONSTRAINT uk4d9rdl7d52k8x3etihxlaujvh UNIQUE (email),
 CONSTRAINT ukqqadnciq8gixe1qmxd0rj9cyk UNIQUE (username),
 PRIMARY KEY(user_id));

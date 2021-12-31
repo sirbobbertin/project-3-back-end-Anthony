@@ -36,9 +36,7 @@ public class SignupRequest {
   @Size(min = 10)
   private String contact;
 
-  @NotBlank
-  private boolean user_removed;
-
+ 
 public String getFirst_name() {
 	return first_name;
 }
@@ -103,12 +101,5 @@ public String getUsername() {
     this.role = role;
   }
 
-public boolean isUser_removed() {
-	return user_removed;
-}
 
-public void setUser_removed(boolean user_removed) {
-	this.user_removed = user_removed;
-}
-  
 }
