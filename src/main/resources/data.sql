@@ -1,15 +1,24 @@
-INSERT INTO user_details(user_email, user_name, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
-VALUES('admin@email.com', 'Admin1', 123456, 'Jane', 'Doe', '16 Main St, San Diego, CA 92037', '555-555-5555', 'Admin', FALSE);
+--INSERT INTO user_details(user_email, user_name, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
+--VALUES('admin@email.com', 'Admin1', 123456, 'Jane', 'Doe', '16 Main St, San Diego, CA 92037', '555-555-5555', 'Admin', FALSE);
 
-INSERT INTO user_details(user_email, user_name, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
-VALUES('customer1@email.com', 'Customer1', 123456, 'John', 'Doe', '35 Enterprise Ln, Los Angeles, CA 90001', '555-222-5555', 'Customer', FALSE);
+--INSERT INTO user_details(user_email, user_name, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
+--VALUES('customer1@email.com', 'Customer1', 123456, 'John', 'Doe', '35 Enterprise Ln, Los Angeles, CA 90001', '555-222-5555', 'Customer', FALSE);
 
-INSERT INTO user_details(user_email, user_name, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
-VALUES('customer2@email.com', 'Customer2', 123456, 'James', 'Doe', '35 Enterprise Ln, Los Angeles, CA 90001', '555-222-5555', 'Customer', FALSE);
+--INSERT INTO user_details(user_email, user_name, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
+--VALUES('customer2@email.com', 'Customer2', 123456, 'James', 'Doe', '35 Enterprise Ln, Los Angeles, CA 90001', '555-222-5555', 'Customer', FALSE);
 
-INSERT INTO user_details(user_email, user_name, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
-VALUES('customer3@email.com', 'Customer3', 123456, 'Jenny', 'Doe', '35 Enterprise Ln, Los Angeles, CA 90001', '555-222-5555', 'Customer', FALSE);
 
+INSERT INTO roles(name)
+VALUES('ROLE_USER');
+
+INSERT INTO roles(name)
+VALUES('ROLE_ADMIN');
+
+INSERT INTO user_roles(uid, role_id)
+VALUES(1, 2);
+
+INSERT INTO user_details(user_id, email, username, password, first_name, last_name, address, contact, user_removed)
+VALUES('1','admin@email.com','admin', '123456', 'John', 'Doe', '35 Enterprise Ln, Los Angeles, CA 90001','555-222-5555','false');
 
 -- #------- PRODUCT DATA --------
 
@@ -27,11 +36,11 @@ VALUES('https://media.istockphoto.com/photos/apple-macbook-pro-picture-id1359231
 
 -- #------- CART DATA --------
 
-INSERT INTO cart_details(user_id, cart_paid, cart_removed, cart_total) VALUES ( 1, FALSE, FALSE, 100000);
+--INSERT INTO cart_details(user_id, cart_paid, cart_removed, cart_total) VALUES ( 1, FALSE, FALSE, 100000);
 
-INSERT INTO cart_items(cart_id, product_id, cart_qty) VALUES ( 1, 1, 2 );
+--INSERT INTO cart_items(cart_id, product_id, cart_qty) VALUES ( 1, 1, 2 );
 
-INSERT INTO cart_items(cart_id, product_id, cart_qty) VALUES ( 1, 2, 1 );
+--INSERT INTO cart_items(cart_id, product_id, cart_qty) VALUES ( 1, 2, 1 );
 
 -- #------- DISCOUNT DATA --------
 
