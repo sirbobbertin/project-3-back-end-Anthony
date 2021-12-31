@@ -17,8 +17,8 @@ VALUES('ROLE_ADMIN');
 INSERT INTO user_roles(uid, role_id)
 VALUES(1, 2);
 
-INSERT INTO user_details(user_id, email, username, password, first_name, last_name, address, contact, user_removed)
-VALUES('1','admin@email.com','admin', '123456', 'John', 'Doe', '35 Enterprise Ln, Los Angeles, CA 90001','555-222-5555','false');
+INSERT INTO user_details(user_id, email, username, password, first_name, last_name, address, contact)
+VALUES('1','admin@email.com','admin', '$2a$10$MPZozc4ZGXGAPYfcahvwZusPR9opwnWomMoIXYFB0Dk6hpdi0ZCde', 'John', 'Doe', '35 Enterprise Ln, Los Angeles, CA 90001','555-222-5555');
 
 -- #------- PRODUCT DATA --------
 

@@ -48,9 +48,8 @@ public class User {
   @Size(min = 10)
   private String contact;
   
-  @NotBlank
-  @Size(min = 10)
-  private boolean user_removed;
+  
+
 
   @ManyToMany(fetch = FetchType.LAZY)
   @JoinTable(  name = "user_roles", 
@@ -61,7 +60,7 @@ public class User {
   public User() {
   }
 
-  public User(String username, String email, String password, String first_name, String last_name, String address, String contact, boolean user_removed) {
+  public User(String username, String email, String password, String first_name, String last_name, String address, String contact) {
     this.username = username;
     this.email = email;
     this.password = password;
@@ -69,7 +68,6 @@ public class User {
     this.last_name = last_name;
     this.address = address;
     this.contact = contact;
-    this.user_removed = user_removed;
 
   }
 
@@ -146,13 +144,7 @@ public String getUsername() {
     this.roles = roles;
   }
 
-public boolean isUser_removed() {
-	return user_removed;
-}
 
-public void setUser_removed(boolean user_removed) {
-	this.user_removed = user_removed;
-}
 
 
   
