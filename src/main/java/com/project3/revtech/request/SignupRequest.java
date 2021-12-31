@@ -1,26 +1,12 @@
-package com.project3.revtech.entity;
+package com.project3.revtech.request;
 
-import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
-@Entity
-@Table(name = "user_details", 
-    uniqueConstraints = { 
-      @UniqueConstraint(columnNames = "username"),
-      @UniqueConstraint(columnNames = "email") 
-    })
-public class User {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int user_id;
-
+public class SignupRequest {
   @NotBlank
-  @Size(max = 20)
+  @Size(min = 3, max = 20)
   private String username;
 
   @NotBlank
@@ -28,8 +14,10 @@ public class User {
   @Email
   private String email;
 
+  private Set<String> role;
+
   @NotBlank
-  @Size(max = 120)
+  @Size(min = 6, max = 40)
   private String password;
   
   @NotBlank
@@ -47,34 +35,11 @@ public class User {
   @NotBlank
   @Size(min = 10)
   private String contact;
-  
+
   @NotBlank
-  @Size(min = 10)
   private boolean user_removed;
 
-  @ManyToMany(fetch = FetchType.LAZY)
-  @JoinTable(  name = "user_roles", 
-        joinColumns = @JoinColumn(name = "uid"), 
-        inverseJoinColumns = @JoinColumn(name = "role_id"))
-  private Set<Role> roles = new HashSet<>();
-
-  public User() {
-  }
-
-  public User(String username, String email, String password, String first_name, String last_name, String address, String contact, boolean user_removed) {
-    this.username = username;
-    this.email = email;
-    this.password = password;
-    this.first_name = first_name;
-    this.last_name = last_name;
-    this.address = address;
-    this.contact = contact;
-    this.user_removed = user_removed;
-
-  }
-
-
-  public String getFirst_name() {
+public String getFirst_name() {
 	return first_name;
 }
 
@@ -106,14 +71,6 @@ public void setContact(String contact) {
 	this.contact = contact;
 }
 
-public int getUser_id() {
-	return user_id;
-}
-
-public void setUser_id(int user_id) {
-	this.user_id = user_id;
-}
-
 public String getUsername() {
     return username;
   }
@@ -138,12 +95,12 @@ public String getUsername() {
     this.password = password;
   }
 
-  public Set<Role> getRoles() {
-    return roles;
+  public Set<String> getRole() {
+    return this.role;
   }
 
-  public void setRoles(Set<Role> roles) {
-    this.roles = roles;
+  public void setRole(Set<String> role) {
+    this.role = role;
   }
 
 public boolean isUser_removed() {
@@ -153,7 +110,5 @@ public boolean isUser_removed() {
 public void setUser_removed(boolean user_removed) {
 	this.user_removed = user_removed;
 }
-
-
   
 }

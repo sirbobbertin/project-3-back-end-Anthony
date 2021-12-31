@@ -2,124 +2,84 @@ package com.project3.revtech.pojo;
 
 public class UserPojo {
 
-    private int userId;
-    private String userEmail;
-    private String userName;
-    private String userPassword;
-    private String userFirstName;
-    private String userLastName;
-    private String userAddress;
-    private String userContact;
-    private String userType;
-    private boolean userRemoved;
+	 private int user_id;
+	 private String firstName;
+	 private String lastName;
+     private String username;
+     private String email;
+     private String password;
+	 private String address;
+	 private String contact;
+	public UserPojo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public UserPojo(int user_id, String firstName, String lastName, String username, String email, String password,
+			String address, String contact) {
+		super();
+		this.user_id = user_id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.username = username;
+		this.email = email;
+		this.password = password;
+		this.address = address;
+		this.contact = contact;
+	}
+	public int getUser_id() {
+		return user_id;
+	}
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getContact() {
+		return contact;
+	}
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
+	@Override
+	public String toString() {
+		return "UserPojo [user_id=" + user_id + ", firstName=" + firstName + ", lastName=" + lastName + ", username="
+				+ username + ", email=" + email + ", password=" + password + ", address=" + address + ", contact="
+				+ contact + "]";
+	}
 
-    public UserPojo(int userId, String userEmail, String userName, String userPassword, String userFirstName,
-                    String userLastName, String userAddress, String userContact, String userType, boolean userRemoved) {
-        this.userId = userId;
-        this.userEmail = userEmail;
-        this.userName = userName;
-        this.userPassword = userPassword;
-        this.userFirstName = userFirstName;
-        this.userLastName = userLastName;
-        this.userAddress = userAddress;
-        this.userContact = userContact;
-        this.userType = userType;
-        this.userRemoved = userRemoved;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
-    public String getUserEmail() {
-        return userEmail;
-    }
-
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getUserPassword() {
-        return userPassword;
-    }
-
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
-    }
-
-    public String getUserFirstName() {
-        return userFirstName;
-    }
-
-    public void setUserFirstName(String userFirstName) {
-        this.userFirstName = userFirstName;
-    }
-
-    public String getUserLastName() {
-        return userLastName;
-    }
-
-    public void setUserLastName(String userLastName) {
-        this.userLastName = userLastName;
-    }
-
-    public String getUserAddress() {
-        return userAddress;
-    }
-
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
-    }
-
-    public String getUserContact() {
-        return userContact;
-    }
-
-    public void setUserContact(String userContact) {
-        this.userContact = userContact;
-    }
-
-    public String getUserType() {
-        return userType;
-    }
-
-    public void setUserType(String userType) {
-        this.userType = userType;
-    }
-
-    public boolean isUserRemoved() {
-        return userRemoved;
-    }
-
-    public void setUserRemoved(boolean userRemoved) {
-        this.userRemoved = userRemoved;
-    }
-
-    @Override
-    public String toString() {
-        return "UserPojo{" +
-                "userId=" + userId +
-                ", userEmail='" + userEmail + '\'' +
-                ", userName='" + userName + '\'' +
-                ", userPassword='" + userPassword + '\'' +
-                ", userFirstName='" + userFirstName + '\'' +
-                ", userLastName='" + userLastName + '\'' +
-                ", userAddress='" + userAddress + '\'' +
-                ", userContact='" + userContact + '\'' +
-                ", userType='" + userType + '\'' +
-                ", userRemoved=" + userRemoved +
-                '}';
-    }
+  
 }
