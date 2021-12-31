@@ -1,192 +1,151 @@
 package com.project3.revtech.entity;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
-
-// @Getter
-// @Setter
-// @NoArgsConstructor
-@ToString
 @Entity
-@Table(name = "user_details")
+@Table(name = "user_details", 
+    uniqueConstraints = { 
+      @UniqueConstraint(columnNames = "username"),
+      @UniqueConstraint(columnNames = "email") 
+    })
 public class User {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private int user_id;
 
-	public User() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+  @NotBlank
+  @Size(max = 20)
+  private String username;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "user_id")
-	private int userId;
+  @NotBlank
+  @Size(max = 50)
+  @Email
+  private String email;
 
-	public int getUserId() {
-		return userId;
-	}
+  @NotBlank
+  @Size(max = 120)
+  private String password;
+  
+  @NotBlank
+  @Size(max = 20)
+  private String first_name;
+  
+  @NotBlank
+  @Size(max = 20)
+  private String last_name;
+  
+  @NotBlank
+  @Size(max = 200)
+  private String address;
+  
+  @NotBlank
+  @Size(min = 10)
+  private String contact;
+  
+  
 
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
 
-	public List<Cart> getCarts() {
-		return carts;
-	}
+  @ManyToMany(fetch = FetchType.LAZY)
+  @JoinTable(  name = "user_roles", 
+        joinColumns = @JoinColumn(name = "uid"), 
+        inverseJoinColumns = @JoinColumn(name = "role_id"))
+  private Set<Role> roles = new HashSet<>();
 
-	public void setCarts(List<Cart> carts) {
-		this.carts = carts;
-	}
+  public User() {
+  }
 
-	public String getUserEmail() {
-		return userEmail;
-	}
+  public User(String username, String email, String password, String first_name, String last_name, String address, String contact) {
+    this.username = username;
+    this.email = email;
+    this.password = password;
+    this.first_name = first_name;
+    this.last_name = last_name;
+    this.address = address;
+    this.contact = contact;
 
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
-	}
+  }
 
-	public String getUserName() {
-		return userName;
-	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+  public String getFirst_name() {
+	return first_name;
+}
 
-	public String getUserPassword() {
-		return userPassword;
-	}
+public void setFirst_name(String first_name) {
+	this.first_name = first_name;
+}
 
-	public void setUserPassword(String userPassword) {
-		this.userPassword = userPassword;
-	}
+public String getLast_name() {
+	return last_name;
+}
 
-	public String getUserFirstName() {
-		return userFirstName;
-	}
+public void setLast_name(String last_name) {
+	this.last_name = last_name;
+}
 
-	public void setUserFirstName(String userFirstName) {
-		this.userFirstName = userFirstName;
-	}
+public String getAddress() {
+	return address;
+}
 
-	public String getUserLastName() {
-		return userLastName;
-	}
+public void setAddress(String address) {
+	this.address = address;
+}
 
-	public void setUserLastName(String userLastName) {
-		this.userLastName = userLastName;
-	}
+public String getContact() {
+	return contact;
+}
 
-	public String getUserAddress() {
-		return userAddress;
-	}
+public void setContact(String contact) {
+	this.contact = contact;
+}
 
-	public void setUserAddress(String userAddress) {
-		this.userAddress = userAddress;
-	}
+public int getUser_id() {
+	return user_id;
+}
 
-	public String getUserContact() {
-		return userContact;
-	}
+public void setUser_id(int user_id) {
+	this.user_id = user_id;
+}
 
-	public void setUserContact(String userContact) {
-		this.userContact = userContact;
-	}
+public String getUsername() {
+    return username;
+  }
 
-	public String getUserType() {
-		return userType;
-	}
+  public void setUsername(String username) {
+    this.username = username;
+  }
 
-	public void setUserType(String userType) {
-		this.userType = userType;
-	}
+  public String getEmail() {
+    return email;
+  }
 
-	public boolean isUserRemoved() {
-		return userRemoved;
-	}
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-	public void setUserRemoved(boolean userRemoved) {
-		this.userRemoved = userRemoved;
-	}
+  public String getPassword() {
+    return password;
+  }
 
-	@OneToMany(mappedBy = "user")
-	private List<Cart> carts;
+  public void setPassword(String password) {
+    this.password = password;
+  }
 
-	@NotNull
-	@Column(name = "user_email")
-	private String userEmail;
+  public Set<Role> getRoles() {
+    return roles;
+  }
 
-	@NotNull
-	@Column(name = "user_name")
-	private String userName;
+  public void setRoles(Set<Role> roles) {
+    this.roles = roles;
+  }
 
-	@NotNull
-	@Column(name = "user_password")
-	private String userPassword;
 
-	@NotNull
-	@Column(name = "user_first_name")
-	private String userFirstName;
 
-	@NotNull
-	@Column(name = "user_last_name")
-	private String userLastName;
 
-	@NotNull
-	@Column(name = "user_address")
-	private String userAddress;
-
-	@NotNull
-	@Column(name = "user_contact")
-	private String userContact;
-
-	@NotNull
-	@Column(name = "user_type")
-	private String userType;
-
-	@Column(name = "user_removed")
-	private boolean userRemoved;
-
-	public User(int userId, List<Cart> carts, @NotNull String userEmail, @NotNull String userName,
-			@NotNull String userPassword, @NotNull String userFirstName, @NotNull String userLastName,
-			@NotNull String userAddress, @NotNull String userContact, @NotNull String userType, boolean userRemoved) {
-		super();
-		this.userId = userId;
-		this.carts = carts;
-		this.userEmail = userEmail;
-		this.userName = userName;
-		this.userPassword = userPassword;
-		this.userFirstName = userFirstName;
-		this.userLastName = userLastName;
-		this.userAddress = userAddress;
-		this.userContact = userContact;
-		this.userType = userType;
-		this.userRemoved = userRemoved;
-	}
-
-	public User(int userId, String userEmail, String userName, String userPassword, String userFirstName, String userLastName, String userAddress, String userContact, String userType, boolean userRemoved) {
-		this.userId = userId;
-		this.userEmail = userEmail;
-		this.userName = userName;
-		this.userPassword = userPassword;
-		this.userFirstName = userFirstName;
-		this.userLastName = userLastName;
-		this.userAddress = userAddress;
-		this.userContact = userContact;
-		this.userType = userType;
-		this.userRemoved = userRemoved;
-	}
+  
 }
