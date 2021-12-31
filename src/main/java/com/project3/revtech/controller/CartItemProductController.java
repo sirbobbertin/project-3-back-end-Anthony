@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("api/cart-and-items")
-
 public class CartItemProductController {
 
     @Autowired
@@ -27,3 +26,4 @@ public class CartItemProductController {
     }
 
 }
+

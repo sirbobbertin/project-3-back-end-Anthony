@@ -1,67 +1,48 @@
--- # -------- Missing columns & cause error on insert---------
+--INSERT INTO user_details(user_email, user_name, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
+--VALUES('admin@email.com', 'Admin1', 123456, 'Jane', 'Doe', '16 Main St, San Diego, CA 92037', '555-555-5555', 'Admin', FALSE);
 
--- INSERT INTO user_details(user_email, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
--- VALUES('manager@email.com', 123456, 'Jane', 'Doe', 'California', '555-555-5555', 'Manager', FALSE);
---
--- INSERT INTO user_details(user_email, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
--- VALUES('employee@email.com', 123456, 'John', 'Doe', 'California', '555-555-5555', 'Employee', FALSE);
---
--- INSERT INTO user_details(user_email, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
--- VALUES('customer1@email.com', 123456, 'Test', 'Doe', 'California', '555-555-5555', 'Customer', FALSE);
---
--- INSERT INTO user_details(user_email, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
--- VALUES('customer2@email.com', 123456, 'Test', 'Doe', 'California', '555-555-5555', 'Customer', FALSE);
---
---
--- INSERT INTO user_details(user_email, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
--- VALUES('customer3@email.com', 123456, 'Test', 'Doe', 'California', '555-555-5555', 'Customer', FALSE);
+--INSERT INTO user_details(user_email, user_name, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
+--VALUES('customer1@email.com', 'Customer1', 123456, 'John', 'Doe', '35 Enterprise Ln, Los Angeles, CA 90001', '555-222-5555', 'Customer', FALSE);
 
--- #--------- Fixed the missing columns User Tables
-INSERT INTO user_details(user_id, user_email, user_name, user_password, user_first_name,
-user_last_name, user_address, user_contact, user_type, user_removed)
-VALUES(1,'manager@email.com',' testu', 'password', 'Jane', 'Doe',
-'123 main St Los Angeles, CA', '555-555-5555', 'Customer', FALSE);
+--INSERT INTO user_details(user_email, user_name, user_password, user_first_name, user_last_name, user_address, user_contact, user_type, user_removed)
+--VALUES('customer2@email.com', 'Customer2', 123456, 'James', 'Doe', '35 Enterprise Ln, Los Angeles, CA 90001', '555-222-5555', 'Customer', FALSE);
 
-INSERT INTO user_details(user_id, user_email, user_name, user_password, user_first_name,
-user_last_name, user_address, user_contact, user_type, user_removed)
-VALUES(2,'keu@gemail.com',' newg1', 'pass1', 'Kiera', 'Eupnary',
-'66 Elm St Manchester, NH', '321-115-6500', 'Customer', FALSE);
 
--- #-------For adding Products --------
+INSERT INTO roles(name)
+VALUES('ROLE_USER');
 
-insert into product_details(product_id, image_url, product_category, product_cost,
-product_description, product_name, product_qty, product_removed, product_sku)
-values (1, 'http://pexels.com/img23', 'Gaming Chairs', 234.89,
-'Best gaming chair ever. You can play all daylong & will never get body ache. Its for the real gamer',
-'XBlaster Chair', 10, false, 'A0XB34GCHAIR00234');
+INSERT INTO roles(name)
+VALUES('ROLE_ADMIN');
 
- insert into product_details(product_id, image_url, product_category, product_cost,
-  product_description, product_name, product_qty, product_removed, product_sku)
- values (2, 'http://pexels.com/img12', 'Gaming Chairs', 134.79,
- 'New gaming chair ever. You can play all day long & will never get body ache. Its for the real gamer',
- 'New XBlaster Chair', 5, false, 'A0XB34GNEWC00234');
+INSERT INTO user_roles(uid, role_id)
+VALUES(1, 2);
 
- insert into product_details(product_id, image_url, product_category, product_cost,
-  product_description, product_name, product_qty, product_removed, product_sku)
-  values (3, 'http://pexels.com/img78', 'Head Phones', 300.12, 'Great for music lovers, Noise Cancelling features better than Sony.',
-  'MPow-78', 2, false, 'BNH11R00234');
+INSERT INTO user_details(user_id, email, username, password, first_name, last_name, address, contact)
+VALUES('1','admin@email.com','admin', '$2a$10$MPZozc4ZGXGAPYfcahvwZusPR9opwnWomMoIXYFB0Dk6hpdi0ZCde', 'John', 'Doe', '35 Enterprise Ln, Los Angeles, CA 90001','555-222-5555');
 
-   insert into product_details(product_id, image_url, product_category, product_cost,
-    product_description, product_name, product_qty, product_removed, product_sku)
-    values (4, 'http://pexels.com/img40', 'Head Phones', 350.21, 'Amazing Sound, bass etc, Noise Cancelling features better than  Apple.',
-    'MSound-79', 6, false, 'C09H11R00234');
+-- #------- PRODUCT DATA --------
 
-INSERT INTO product_details(product_name, product_cost, product_category, product_description, product_sku, product_qty, image_url, product_removed)
-VALUES('iphone 13 Pro MAX', 99.95, 'PHONES', 'The newest iphone - 6.7 inch display', 'XXXXXX', 4, '_PHOTO_PLACE_HOLDER_', FALSE);
---
--- INSERT INTO product_details(product_name, product_cost, product_category, product_description, product_sku, product_qty, image_url, product_removed)
--- VALUES('iphone X Pro MAX', 50.95, 'PHONES', 'not newest iphone - 5.9 inch display', 'XXXXXX', 4, '_PHOTO_PLACE_HOLDER_', FALSE);
---
-INSERT INTO cart_details(user_id, cart_paid, cart_removed, cart_total) VALUES ( 1, FALSE, FALSE, 100000);
+INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
+VALUES('https://media.istockphoto.com/photos/front-view-of-sport-racing-design-gaming-orange-and-black-chair-picture-id1213709609?k=20&m=1213709609&s=612x612&w=0&h=tQePVtqTHNOXiVjv-3GNqfK9_9lbj4wCQZ5vsZBCgMo=',
+'Gaming Chairs', 199.99, 'Ergonomic pro gaming chair. Rated #1 by gamers worldwide.', 'XBlaster Chair', 10, FALSE, 'A0XB34GCHAIR00234');
 
-INSERT INTO cart_items(cart_id, product_id, cart_qty) VALUES ( 1, 1, 2 );
+INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
+VALUES('https://media.istockphoto.com/photos/newly-released-iphone-13-pro-mockup-set-with-back-and-front-angles-picture-id1356372494?k=20&m=1356372494&s=612x612&w=0&h=4IyK75PK9dd4zY-CPAF_scPK-HwsoYS2mmWJZzBwp2A=',
+'Phones', 1099.99, 'Lastest Model - 6.7 inch display', 'iPhone 13 Pro', 20, FALSE, 'A0XB34GPHONE00234');
 
-INSERT INTO cart_items(cart_id, product_id, cart_qty) VALUES ( 1, 2, 1 );
+INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
+VALUES('https://media.istockphoto.com/photos/apple-macbook-pro-picture-id1359231245?k=20&m=1359231245&s=612x612&w=0&h=IcpoP3WnypK72bZXnWIRebNilg5t_eUd0KiHGmvN5iI=',
+'Laptops', 1999.99, 'Lastest Model - M1 Chip', 'Macbook Pro', 10, FALSE, 'A0XB34GLAPTOP00234');
+
+-- #------- CART DATA --------
+
+--INSERT INTO cart_details(user_id, cart_paid, cart_removed, cart_total) VALUES ( 1, FALSE, FALSE, 100000);
+
+--INSERT INTO cart_items(cart_id, product_id, cart_qty) VALUES ( 1, 1, 2 );
+
+--INSERT INTO cart_items(cart_id, product_id, cart_qty) VALUES ( 1, 2, 1 );
+
+-- #------- DISCOUNT DATA --------
 
 INSERT INTO discount_details(product_id, discount_description, discount_percentage) VALUES ( 2, 'stuff', 20 );
 
