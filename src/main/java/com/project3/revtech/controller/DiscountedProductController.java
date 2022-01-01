@@ -26,6 +26,4 @@ public class DiscountedProductController {
     List<ProductAndDiscountPojo> getAllProducts() throws ApplicationException{
         return productDiscountService.getAllDiscountedProducts();
     }
-
-
 }
