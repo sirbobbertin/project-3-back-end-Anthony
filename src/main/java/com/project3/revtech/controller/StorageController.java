@@ -18,7 +18,7 @@ import com.project3.revtech.service.StorageService;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("http://ec2-50-16-74-43.compute-1.amazonaws.com:7777/file")
+@RequestMapping("file")
 public class StorageController {
 
  @Autowired

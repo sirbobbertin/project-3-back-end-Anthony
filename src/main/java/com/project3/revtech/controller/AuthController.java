@@ -34,7 +34,7 @@ import com.project3.revtech.security.jwt.JwtUtils;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("http://ec2-50-16-74-43.compute-1.amazonaws.com:7777/api/auth")
+@RequestMapping("api/auth")
 public class AuthController {
   @Autowired
   AuthenticationManager authenticationManager;

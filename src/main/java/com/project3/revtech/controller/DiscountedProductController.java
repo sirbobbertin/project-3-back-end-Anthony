@@ -16,7 +16,7 @@ import com.project3.revtech.service.ProductDiscountService;
 
 @RestController
 @CrossOrigin
-@RequestMapping(path ="http://ec2-50-16-74-43.compute-1.amazonaws.com:7777/combined")
+@RequestMapping(path ="combined")
 public class DiscountedProductController {
 	
 	@Autowired
