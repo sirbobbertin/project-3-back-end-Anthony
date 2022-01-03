@@ -44,6 +44,6 @@ VALUES('https://media.istockphoto.com/photos/apple-macbook-pro-picture-id1359231
 
 -- #------- DISCOUNT DATA --------
 
-INSERT INTO discount_details(product_id, discount_description, discount_percentage) VALUES ( 2, 'stuff', 20 );
+INSERT INTO discount_details(product_id, discount_description, discount_percentage) VALUES ( 2, 'stuff', .05 );
 
 
