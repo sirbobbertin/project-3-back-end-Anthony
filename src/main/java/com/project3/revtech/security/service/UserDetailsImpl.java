@@ -16,41 +16,52 @@ public class UserDetailsImpl implements UserDetails {
 	  private static final long serialVersionUID = 1L;
 
 	  private int user_id;
-
 	  private String username;
-
 	  private String email;
 	  
 	  private String first_name;
-
+	  
+	  private String last_name;
+	  
+	  private String address;
+	  
+	  private String contact;
 
 	  @JsonIgnore
 	  private String password;
 
 	  private Collection<? extends GrantedAuthority> authorities;
 
-	  public UserDetailsImpl(int user_id, String username, String email, String password,
-	      Collection<? extends GrantedAuthority> authorities, String first_name) {
-	    this.user_id = user_id;
-	    this.username = username;
-	    this.email = email;
-	    this.password = password;
-	    this.authorities = authorities;
-	    this.first_name = first_name;
+	
+	 
 
-	  }
+	public UserDetailsImpl(int user_id, String username, String email,
+			String password, Collection<? extends GrantedAuthority> authorities,
+			String first_name, String last_name,String address,String contact) {
+		super();
+		this.user_id = user_id;
+		this.username = username;
+		this.email = email;
+		this.authorities = authorities;
+		this.password = password;
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.address = address;
+		this.contact = contact;
 
-	  public static UserDetailsImpl build(User user) {
+	}
+
+	public static UserDetailsImpl build(User user) {
 	    List<GrantedAuthority> authorities = user.getRoles().stream()
 	        .map(role -> new SimpleGrantedAuthority(role.getName().name()))
 	        .collect(Collectors.toList());
 
 	    return new UserDetailsImpl(
-	        user.getUser_id(), 
-	        user.getUsername(), 
-	        user.getEmail(),
-	        user.getPassword(), 
-	        authorities, user.getFirst_name());
+	    		 user.getUser_id(), 
+	 	        user.getUsername(), 
+	 	        user.getEmail(),
+	 	        user.getPassword(), 
+	 	        authorities, user.getFirst_name(), user.getLast_name(), user.getAddress(), user.getContact());
 	  }
 
 	  @Override
@@ -58,8 +69,57 @@ public class UserDetailsImpl implements UserDetails {
 	    return authorities;
 	  }
 
+	  
 
-	  public int getUser_id() {
+	  public String getLast_name() {
+		return last_name;
+	}
+
+	public void setLast_name(String last_name) {
+		this.last_name = last_name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getContact() {
+		return contact;
+	}
+
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public void setFirst_name(String first_name) {
+		this.first_name = first_name;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public void setAuthorities(Collection<? extends GrantedAuthority> authorities) {
+		this.authorities = authorities;
+	}
+
+	public int getUser_id() {
 		return user_id;
 	}
 
