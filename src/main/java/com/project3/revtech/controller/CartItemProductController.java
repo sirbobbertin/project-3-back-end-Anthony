@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/cart-and-items")
+@RequestMapping("http://ec2-50-16-74-43.compute-1.amazonaws.com:7777/api/cart-and-items")
 public class CartItemProductController {
 
     @Autowired

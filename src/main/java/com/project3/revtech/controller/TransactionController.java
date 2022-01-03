@@ -20,7 +20,7 @@ import com.project3.revtech.service.TransactionService;
 
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("http://ec2-50-16-74-43.compute-1.amazonaws.com:7777/api")
 public class TransactionController {
 
 	@Autowired
