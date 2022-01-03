@@ -60,7 +60,7 @@ public class ProductDiscountServiceImpl  implements ProductDiscountService{
         Product getAnewProduct = productRepository.getById(productId);
 
         //discount
-        Discount discountedProduct = getAnewProduct.getDiscount();
+        Discount discountedProduct = (getAnewProduct.getDiscount() == null ? new Discount(true) : getAnewProduct.getDiscount());
 
         //create a new product & a  DiscountPojo
         ProductAndDiscountPojo newProdDiscPojo = new ProductAndDiscountPojo(

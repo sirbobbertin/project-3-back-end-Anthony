@@ -24,6 +24,8 @@ public class CartItemProductServiceImpl implements CartItemProductService {
     @Autowired
     CartRepository cartRepository;
 
+    @Autowired CartServiceImpl cartService;
+
 
         @Override
     public CartAndItemsPojo getAllCartItemProducts(int cartId) {
