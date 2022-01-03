@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("http://ec2-50-16-74-43.compute-1.amazonaws.com:7777/api/cart")
+@RequestMapping("api/cart")
 public class CartController {
     @Autowired
     CartServiceImpl cartService;

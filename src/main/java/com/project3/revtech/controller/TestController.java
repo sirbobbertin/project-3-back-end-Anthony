@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("http://ec2-50-16-74-43.compute-1.amazonaws.com:7777/api/test")
+@RequestMapping("api/test")
 public class TestController {
 
     @Autowired
