@@ -36,11 +36,11 @@ VALUES('https://media.istockphoto.com/photos/apple-macbook-pro-picture-id1359231
 
 -- #------- CART DATA --------
 
---INSERT INTO cart_details(user_id, cart_paid, cart_removed, cart_total) VALUES ( 1, FALSE, FALSE, 100000);
+INSERT INTO cart_details(user_id, cart_paid, cart_removed, cart_total) VALUES ( 1, FALSE, FALSE, 100000);
 
---INSERT INTO cart_items(cart_id, product_id, cart_qty) VALUES ( 1, 1, 2 );
+INSERT INTO cart_items(cart_id, product_id, cart_qty) VALUES ( 1, 1, 2 );
 
---INSERT INTO cart_items(cart_id, product_id, cart_qty) VALUES ( 1, 2, 1 );
+INSERT INTO cart_items(cart_id, product_id, cart_qty) VALUES ( 1, 2, 1 );
 
 -- #------- DISCOUNT DATA --------
 
