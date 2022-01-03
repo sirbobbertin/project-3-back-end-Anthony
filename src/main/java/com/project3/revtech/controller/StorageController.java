@@ -9,6 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.project3.revtech.service.StorageService;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/file")
 @CrossOrigin

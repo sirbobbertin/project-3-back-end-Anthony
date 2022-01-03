@@ -34,7 +34,7 @@ import com.project3.revtech.security.jwt.JwtUtils;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("api/auth")
 public class AuthController {
   @Autowired
   AuthenticationManager authenticationManager;
@@ -66,10 +66,10 @@ public class AuthController {
         .collect(Collectors.toList());
 
     return ResponseEntity.ok(new JwtResponse(jwt, 
-                         userDetails.getUser_id(), 
-                         userDetails.getUsername(), 
-                         userDetails.getEmail(), 
-                         roles));
+            userDetails.getUser_id(), 
+            userDetails.getUsername(), 
+            userDetails.getEmail(), 
+            roles, userDetails.getFirst_name(), userDetails.getLast_name(), userDetails.getAddress(), userDetails.getContact()));
   }
 
   @PostMapping("/signup")

@@ -61,31 +61,40 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(HttpSecurity http) throws Exception {
 
-		  http.cors().and().csrf().disable()
-		  .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
-		  .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).
-		  and().authorizeRequests().antMatchers("/api/auth/**").permitAll().and()
-		  .authorizeRequests().antMatchers("/h2-console/**").permitAll().and()
-          .authorizeRequests().antMatchers("/api/product-and-discount").permitAll().and()
-          .authorizeRequests().antMatchers("/api/product-discount/**").permitAll().and()
-          .authorizeRequests().antMatchers("/api/products").permitAll().and()
-          .authorizeRequests().antMatchers("/api/transaction").permitAll().and()
-          .authorizeRequests().antMatchers("/api/transaction/**").permitAll().and()
-          .authorizeRequests().antMatchers("/api/cart-items").permitAll().and()
-          .authorizeRequests().antMatchers("/api/cart-items/**").permitAll().and()
-          .authorizeRequests().antMatchers("/file").permitAll().and()
-          .authorizeRequests().antMatchers("/file/**").permitAll().and()
-          .authorizeRequests().antMatchers("/api/cart-and-items").permitAll().and()
-          .authorizeRequests().antMatchers("/api/cart-and-items/**").permitAll().and()
-          .authorizeRequests().antMatchers("/api/cart").permitAll().and()
-		  .authorizeRequests().antMatchers("/combined/Disc/Products").permitAll().and()
-		  .authorizeRequests().antMatchers("/api/test/**").permitAll()
-		  .anyRequest().authenticated();
-		  http.headers().frameOptions().disable();
+	   http.cors().and().csrf().disable()
+	  .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
+	  .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).
+	   and().authorizeRequests().antMatchers("/api/auth/**").permitAll().and()
+	  .authorizeRequests().antMatchers("/h2-console/**").permitAll().and()
+      .authorizeRequests().antMatchers("/api/product-and-discount").permitAll().and()
+      .authorizeRequests().antMatchers("/api/product-and-discount/**").permitAll().and()
+      .authorizeRequests().antMatchers("/api/products").permitAll().and()
+      .authorizeRequests().antMatchers("/api/auth/signup").permitAll().and()
+      .authorizeRequests().antMatchers("/combined/Disc/Products").permitAll().and()
+	  .authorizeRequests().antMatchers("/api/products/{pid}").permitAll().and()
+	  .authorizeRequests().antMatchers("/file/upload").permitAll().and()
+      .authorizeRequests().antMatchers("/discounts/update").permitAll().and()
+      .authorizeRequests().antMatchers("/discounts/remove/{discId}").permitAll().and()
+      .authorizeRequests().antMatchers("/discounts/add").permitAll().and()
+      .authorizeRequests().antMatchers("/api/transaction").permitAll().and()
+      .authorizeRequests().antMatchers("/api/transaction/**").permitAll().and()
+      .authorizeRequests().antMatchers("/api/cart-items").permitAll().and()
+      .authorizeRequests().antMatchers("/api/cart-items/**").permitAll().and()
+      .authorizeRequests().antMatchers("/file").permitAll().and()
+      .authorizeRequests().antMatchers("/file/**").permitAll().and()
+      .authorizeRequests().antMatchers("/api/cart-and-items").permitAll().and()
+      .authorizeRequests().antMatchers("/api/cart-and-items/**").permitAll().and()
+      .authorizeRequests().antMatchers("/api/cart").permitAll().and()
+      .authorizeRequests().antMatchers("/combined/Disc/Products").permitAll().and()
+      .authorizeRequests().antMatchers("/api/test/**").permitAll().and()
+      .authorizeRequests().antMatchers("/cart/{bid}").permitAll().and()
+      .authorizeRequests().antMatchers("/user/{bid}").permitAll()
+	  .anyRequest().authenticated();
+	   http.headers().frameOptions().disable();
 
 		  
-		  http.addFilterBefore(authenticationJwtTokenFilter(),
-		  UsernamePasswordAuthenticationFilter.class);
+	   http.addFilterBefore(authenticationJwtTokenFilter(),
+	   UsernamePasswordAuthenticationFilter.class);
 		 
 			/*
 			 * http.cors().and().csrf().disable().authorizeRequests().anyRequest().permitAll
