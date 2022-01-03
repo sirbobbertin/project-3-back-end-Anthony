@@ -23,8 +23,8 @@ VALUES('1','admin@email.com','admin', '$2a$10$MPZozc4ZGXGAPYfcahvwZusPR9opwnWomM
 -- #------- PRODUCT DATA --------
 
 INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
-VALUES('https://media.istockphoto.com/photos/front-view-of-sport-racing-design-gaming-orange-and-black-chair-picture-id1213709609?k=20&m=1213709609&s=612x612&w=0&h=tQePVtqTHNOXiVjv-3GNqfK9_9lbj4wCQZ5vsZBCgMo=',
-'Gaming Chairs', 199.99, 'Ergonomic pro gaming chair. Rated #1 by gamers worldwide.', 'XBlaster Chair', 10, FALSE, 'A0XB34GCHAIR00234');
+VALUES('https://media.istockphoto.com/photos/xbox-one-picture-id472044719?k=20&m=472044719&s=612x612&w=0&h=CXhGzWN2fZsw0IrHMbYc6kShj1klOkfkmLcHeD4Nopw=',
+'Gaming Consoles', 199.99, 'Xbox One. Rated #1 by gamers worldwide.', 'Xbox One', 10, FALSE, 'A0XB34XBOX00234');
 
 INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
 VALUES('https://media.istockphoto.com/photos/newly-released-iphone-13-pro-mockup-set-with-back-and-front-angles-picture-id1356372494?k=20&m=1356372494&s=612x612&w=0&h=4IyK75PK9dd4zY-CPAF_scPK-HwsoYS2mmWJZzBwp2A=',
