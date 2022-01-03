@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/product-and-discount")
+@RequestMapping("http://ec2-50-16-74-43.compute-1.amazonaws.com:7777/api/product-and-discount")
 public class ProductAndDiscountController {
 
     @Autowired
