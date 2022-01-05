@@ -50,10 +50,6 @@ VALUES('https://media.istockphoto.com/photos/apple-airpods-pro-on-white-backgrou
 'Earbuds', 249.99, 'Wireless Noise Cancelling Earbuds', 'AirPod Pro', 100, FALSE, 'A0XAB223AUDIOPROT');
 
 INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
-VALUES('https://media.istockphoto.com/photos/blue-joypad-for-play-station-4-picture-id472045079?k=20&m=472045079&s=612x612&w=0&h=UyfLFnfE7MBzZlPsvcwCnoHpORbH6TzQVxA4vptUuu0=',
-'Gaming', 49.99, 'Wireless Gaming Controller (Blue)', 'Sony Dualshock 4 Controller', 10, FALSE, 'A0XB3SLPS4OP00234');
-
-INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
 VALUES('https://media.istockphoto.com/photos/xbox-one-controller-picture-id472036153?k=20&m=472036153&s=612x612&w=0&h=353Bz7VHG7lr8MdBbse9OkBT3wBFoFKl0Vqm2ivGwAE=',
 'Gaming', 49.99, 'Wireless Gaming Controller (Black)', 'Xbox One Controller', 10, FALSE, 'A0XB3SLXBOXOP00234');
 
