@@ -2,30 +2,23 @@ package com.project3.revtech.entity;
 
 import java.util.List;
 
-import javax.persistence.Id;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter
-@Setter
-@NoArgsConstructor
+// @Getter
+// @Setter
+// @NoArgsConstructor
 @ToString
 @Entity
 @Table(name = "cart_details")
 public class Cart {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "cart_id")
 	private int cartId;
 
@@ -50,6 +43,10 @@ public class Cart {
 
 	@Column(name = "cart_removed")
 	private boolean cartRemoved;
+	
+	public Cart() {
+		super();
+	}
 
 	//This constructor will only be used for joined tables. Do not use
 	public Cart(int cartId, Transaction transaction, int userId, User user, List<CartItem> cartItems, int cartTotal,
@@ -72,6 +69,15 @@ public class Cart {
 		this.cartPaid = cartPaid;
 		this.cartRemoved = cartRemoved;
 	}
+
+	public Cart(int userId, int cartTotal, boolean cartPaid, boolean cartRemoved) {
+		this.cartId = cartId;
+		this.userId = userId;
+		this.cartTotal = cartTotal;
+		this.cartPaid = cartPaid;
+		this.cartRemoved = cartRemoved;
+	}
+
 
 	public int getCartId() {
 		return cartId;

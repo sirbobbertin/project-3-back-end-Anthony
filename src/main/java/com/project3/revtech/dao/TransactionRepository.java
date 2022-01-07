@@ -4,13 +4,11 @@ import java.util.List;
 
 import com.project3.revtech.entity.Transaction;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
-
+@Repository
 public interface TransactionRepository extends JpaRepository<Transaction, Integer> {
 
-	@Query("select * from transaction_details where cart_id = ?1")
-	List<Transaction> findAllTransactionsForCart(Integer cartId);
-	
-	
+    List<Transaction> findAllByCartId(int cartId);
+
 }
