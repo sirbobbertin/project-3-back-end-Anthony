@@ -37,6 +37,7 @@ public class DiscountController {
 		return discountService.addDiscount(discount);
 	}
 	
+	
 	@DeleteMapping("remove/discounts/{discId}")
 	boolean removeDiscount(@PathVariable("discId") int discId) throws ApplicationException{
 		return discountService.removeDiscount(discId);

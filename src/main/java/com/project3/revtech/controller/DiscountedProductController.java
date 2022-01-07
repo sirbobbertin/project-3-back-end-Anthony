@@ -22,6 +22,7 @@ public class DiscountedProductController {
 	@Autowired
 	ProductDiscountService productDiscountService;
 	
+	
 	//Returns all Products along with there discounts
     @GetMapping("all/discountedProducts")
     List<ProductAndDiscountPojo> getAllProducts() throws ApplicationException{
