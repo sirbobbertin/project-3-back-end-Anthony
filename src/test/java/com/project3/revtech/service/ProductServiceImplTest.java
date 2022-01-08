@@ -42,16 +42,16 @@ class ProductServiceImplTest {
         Product product = new Product();
         product.setCartItems(new ArrayList<>());
         product.setDiscount(new Discount());
-        product.setImageUrl("https://example.org/example");
+        product.setImageUrl("https://media.istockphoto.com/photos/newly-released-iphone-13-pro-mockup-set-with-back-and-front-angles-picture-id1356372494?k=20&m=1356372494&s=612x612&w=0&h=4IyK75PK9dd4zY-CPAF_scPK-HwsoYS2mmWJZzBwp2A=");
         product.setImages(new ArrayList<>());
-        product.setProductCategory("Product Category");
+        product.setProductCategory("Phones ");
         product.setProductCost(null);
-        product.setProductDescription("Product Description");
+        product.setProductDescription("Hello Product Description");
         product.setProductId(123);
-        product.setProductName("Product Name");
+        product.setProductName("Nokia 123");
         product.setProductQty(1);
         product.setProductRemoved(true);
-        product.setProductSku("Product Sku");
+        product.setProductSku("Pro1234ductSku");
 
         Discount discount = new Discount();
         discount.setDiscountDescription("3");
@@ -63,16 +63,16 @@ class ProductServiceImplTest {
         Product product1 = new Product();
         product1.setCartItems(new ArrayList<>());
         product1.setDiscount(discount);
-        product1.setImageUrl("https://example.org/example");
+        product1.setImageUrl("https://media.istockphoto.com/photos/newly-released-iphone-13-pro-mockup-set-with-back-and-front-angles-picture-id1356372494?k=20&m=1356372494&s=612x612&w=0&h=4IyK75PK9dd4zY-CPAF_scPK-HwsoYS2mmWJZzBwp2A=");
         product1.setImages(new ArrayList<>());
-        product1.setProductCategory("Product Category");
+        product1.setProductCategory("Phone");
         product1.setProductCost(BigDecimal.valueOf(42L));
-        product1.setProductDescription("Product Description");
+        product1.setProductDescription(" Hello Product Description");
         product1.setProductId(123);
-        product1.setProductName("Product Name");
+        product1.setProductName("Nokia 123");
         product1.setProductQty(1);
         product1.setProductRemoved(true);
-        product1.setProductSku("Product Sku");
+        product1.setProductSku("Pro1234ductSku");
 
         Discount discount1 = new Discount();
         discount1.setDiscountDescription("3");
@@ -85,19 +85,19 @@ class ProductServiceImplTest {
         ArrayList<CartItem> cartItemList = new ArrayList<>();
         product2.setCartItems(cartItemList);
         product2.setDiscount(discount1);
-        product2.setImageUrl("https://example.org/example");
+        product2.setImageUrl("https://media.istockphoto.com/photos/newly-released-iphone-13-pro-mockup-set-with-back-and-front-angles-picture-id1356372494?k=20&m=1356372494&s=612x612&w=0&h=4IyK75PK9dd4zY-CPAF_scPK-HwsoYS2mmWJZzBwp2A=");
         product2.setImages(new ArrayList<>());
-        product2.setProductCategory("Product Category");
+        product2.setProductCategory("Phone");
         product2.setProductCost(BigDecimal.valueOf(42L));
-        product2.setProductDescription("Product Description");
+        product2.setProductDescription("Hello Product Description");
         product2.setProductId(123);
-        product2.setProductName("Product Name");
+        product2.setProductName("Nokia");
         product2.setProductQty(1);
         product2.setProductRemoved(true);
-        product2.setProductSku("Product Sku");
+        product2.setProductSku("Pro1234ductSku");
         when(this.productRepository.saveAndFlush((Product) any())).thenReturn(product2);
-        ProductPojo productPojo = new ProductPojo(123, "Product Sku", "Product Name", BigDecimal.valueOf(42L),
-                "Product Category", "Product Description", 1, "https://example.org/example", true);
+        ProductPojo productPojo = new ProductPojo(123, "Pro1234ductSku", "Nokia 123", BigDecimal.valueOf(42L),
+                "Phone", "Hello Product Description", 1, "https://media.istockphoto.com/photos/newly-released-iphone-13-pro-mockup-set-with-back-and-front-angles-picture-id1356372494?k=20&m=1356372494&s=612x612&w=0&h=4IyK75PK9dd4zY-CPAF_scPK-HwsoYS2mmWJZzBwp2A=", true);
 
         ProductPojo actualAddProductServiceResult = this.productServiceImpl.addProductService(productPojo);
         assertSame(productPojo, actualAddProductServiceResult);
