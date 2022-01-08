@@ -63,8 +63,8 @@ INSERT INTO cart_items(cart_id, product_id, cart_qty) VALUES ( 1, 2, 1 );
 
 -- #------- DISCOUNT DATA --------
 
-INSERT INTO discount_details(product_id, discount_description, discount_percentage) VALUES ( 1, 'Deal of the Day', .20 );
-INSERT INTO discount_details(product_id, discount_description, discount_percentage) VALUES ( 3, 'Deal of the Day', .10 );
-INSERT INTO discount_details(product_id, discount_description, discount_percentage) VALUES ( 4, 'Deal of the Day', .10 );
-INSERT INTO discount_details(product_id, discount_description, discount_percentage) VALUES ( 6, 'Deal of the Day', .10 );
+INSERT INTO discount_details(product_id, discount_description, discount_percentage) VALUES ( 1, 'Deal of the Day', 20 );
+INSERT INTO discount_details(product_id, discount_description, discount_percentage) VALUES ( 3, 'Deal of the Day', 10 );
+INSERT INTO discount_details(product_id, discount_description, discount_percentage) VALUES ( 4, 'Deal of the Day', 10 );
+INSERT INTO discount_details(product_id, discount_description, discount_percentage) VALUES ( 6, 'Deal of the Day', 10 );
 
