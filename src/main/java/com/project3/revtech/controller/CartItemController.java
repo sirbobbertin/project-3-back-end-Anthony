@@ -15,7 +15,7 @@ public class CartItemController {
     @Autowired
     CartItemServiceImpl cartItemService;
 
-    @PostMapping
+    @PostMapping("post")
     ResponseEntity<CartItemPojo> addItem(@RequestBody CartItemPojo cartItem) throws ApplicationException {
 
         return ResponseEntity.ok()
@@ -23,7 +23,7 @@ public class CartItemController {
                 .body(cartItemService.addItem(cartItem));
     }
 
-    @PutMapping
+    @PutMapping("put")
     ResponseEntity<CartItemPojo> updateItem(@RequestBody CartItemPojo cartItem) throws ApplicationException {
 
         return ResponseEntity.ok()
@@ -32,7 +32,7 @@ public class CartItemController {
     }
 
 
-    @DeleteMapping("{bid}")
+    @DeleteMapping("{bid}/delete")
     ResponseEntity<Boolean> removeItem(@PathVariable("bid") int cartItemId) throws ApplicationException {
         return ResponseEntity.ok()
                 .header("Content-type", "application/json")
