@@ -1,48 +1,43 @@
 package com.project3.revtech.service;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.any;
-import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.verify;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
-import com.amazonaws.SdkClientException;
-import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.model.S3Object;
-import com.amazonaws.util.StringInputStream;
-
-import java.io.UnsupportedEncodingException;
-
+import  com.project3.revtech.dao.ImageControllerRepository;
+import  com.project3.revtech.entity.Image;
+import com.project3.revtech.entity.Product;
+import  com.project3.revtech.exception.ApplicationException;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@ContextConfiguration(classes = {StorageService.class, String.class})
-@ExtendWith(SpringExtension.class)
-class StorageServiceTest {
-    @MockBean
-    private AmazonS3 amazonS3;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+import java.math.BigDecimal;
+
+@SpringBootTest
+public class StorageServiceTest {
+
+    // Test for Image Upload method without Mockito --//
 
     @Autowired
     private StorageService storageService;
 
-    @Test
-    void testDownloadFile() throws SdkClientException, UnsupportedEncodingException {
-        S3Object s3Object = new S3Object();
-        s3Object.setObjectContent(new StringInputStream("Lorem ipsum dolor sit amet."));
-        when(this.amazonS3.getObject((String) any(), (String) any())).thenReturn(s3Object);
-        assertEquals(27, this.storageService.downloadFile("foo.txt").length);
-        verify(this.amazonS3).getObject((String) any(), (String) any());
-    }
+    @MockBean
+    private ImageControllerRepository imageControllerRepository;
 
     @Test
-    void testDeleteFile() throws SdkClientException {
-        doNothing().when(this.amazonS3).deleteObject((String) any(), (String) any());
-        assertEquals("foo.txt removed ...", this.storageService.deleteFile("foo.txt"));
-        verify(this.amazonS3).deleteObject((String) any(), (String) any());
+    public void uploadImageTest() throws ApplicationException {
+        Image uploadImage = new Image(
+                1,
+                "https://media.istockphoto.com/photos/newly-released-iphone-13-pro-mockup-set-with-back-and-front-angles-picture-id1356372494?k=20&m=1356372494&s=612x612&w=0&h=4IyK75PK9dd4zY-CPAF_scPK-HwsoYS2mmWJZzBwp2A=",
+                new Product(11,
+                        "JLDRH11R00234", "VPOW Sound",
+                        new BigDecimal(210.71), "Bose 2",
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        6, "http://pexels.com/JldroidImg1", false),
+                1);
+        //We must access Spring Data JPA Built-in methods directly in  repository
+        when(imageControllerRepository.saveAndFlush(any(Image.class))).thenReturn(uploadImage);
     }
 }
-
