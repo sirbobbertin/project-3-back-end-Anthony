@@ -1,4 +1,4 @@
-package com.project3.revtech.imageuploadtesting;
+package com.project3.revtech.service;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
@@ -7,7 +7,6 @@ import  com.project3.revtech.dao.ImageControllerRepository;
 import  com.project3.revtech.entity.Image;
 import com.project3.revtech.entity.Product;
 import  com.project3.revtech.exception.ApplicationException;
-import  com.project3.revtech.service.StorageService;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +17,8 @@ import java.math.BigDecimal;
 
 @SpringBootTest
 public class StorageServiceTest {
+
+    // Test for Image Upload method without Mockito --//
 
     @Autowired
     private StorageService storageService;
@@ -36,6 +37,7 @@ public class StorageServiceTest {
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                         6, "http://pexels.com/JldroidImg1", false),
                 1);
+        //We must access Spring Data JPA Built-in methods directly in  repository
         when(imageControllerRepository.saveAndFlush(any(Image.class))).thenReturn(uploadImage);
     }
 }
