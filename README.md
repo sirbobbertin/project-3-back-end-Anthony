@@ -2,8 +2,6 @@
 
 Project 3 - E-Commerce Store (Team Project)
 
-URL of Front-End: https://github.com/aimenAlt/project-3-front-end-beta.git
-
 Project Description
 -----
 The Revtech E-Commerce Application is an Angular Single Page Application (SPA) that will allow users to sign up and login as a customer, browse all available products, view an individual product, and add products to their carts for purchase. Any user can browse the database of products, however, in order to purchase one you must be logged into an account. A new account can be created using the sign-up button. After an account is created the user will be able to login and purchase the products(s) of their choice. With our products route, the user is able to view all of the products we have in our database on a single page. When the user clicks on a product that they are interested in, it will redirect them to that product’s specific page to see additional details. Here, the user will be able to see the title, cost, discount and description of the product. This page will also include a button that will add the product to their cart if they would like to purchase it. The cart is the user’s final destination and where they will be able to see the products they wish to purchase, review the total costs of selected products, and also be able to check the products out to complete their purchase.
@@ -69,7 +67,8 @@ To-do list:
 
 Getting Started
 -----
-git clone `YOUR GITHUB REPO`
+* git clone `https://github.com/revature-rev-tech/project-3-back-end.git`
+* git clone `https://github.com/revature-rev-tech/project-3-front-end-beta.git`
 
 Contributors
 -----
@@ -77,5 +76,5 @@ Scrum Master: Michelle Ng
 
 Team Leads: Rowel Selidio, James Lemaire, Aimen Altaiyeb
 
-Team Members: Derrice Wright, Tulika Ghosh, Anthony Johnson, Austin Noel, Tareeq Hamilton, Sameh Botros (edited) 
+Team Members: Derrice Wright, Tulika Ghosh, Anthony Johnson, Austin Noel, Tareeq Hamilton, Sameh Botros
 
