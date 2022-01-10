@@ -52,6 +52,12 @@ public class CartItemServiceImpl implements CartItemService{
     }
 
     @Override
+    public CartItemPojo getCartItem(int item) throws ApplicationException {
+//        CartItemPojo cart
+        return null;
+    }
+
+    @Override
     public boolean removeItem(int itemId) throws ApplicationException {
         cartItemRepository.deleteById(itemId);
         return true;
