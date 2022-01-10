@@ -20,7 +20,7 @@ VALUES(2, 'customer@example.com', 'customer', '$2a$10$KgNaOf.aVTq7oiig9Wq6vuYlvz
 
 INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
 VALUES('https://media.istockphoto.com/photos/xbox-one-picture-id472044719?k=20&m=472044719&s=612x612&w=0&h=CXhGzWN2fZsw0IrHMbYc6kShj1klOkfkmLcHeD4Nopw=',
-'Gaming Consoles', 249.99, 'Xbox One. Rated #1 by gamers worldwide.', 'Xbox One', 10, FALSE, 'M33A1R28XC7IPIAKM23EBS6');
+'Video Games', 249.99, 'Xbox One. Rated #1 by gamers worldwide.', 'Xbox One', 10, FALSE, 'M33A1R28XC7IPIAKM23EBS6');
 
 INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
 VALUES('https://media.istockphoto.com/photos/newly-released-iphone-13-pro-mockup-set-with-back-and-front-angles-picture-id1356372494?k=20&m=1356372494&s=612x612&w=0&h=4IyK75PK9dd4zY-CPAF_scPK-HwsoYS2mmWJZzBwp2A=',
@@ -64,7 +64,7 @@ VALUES('https://media.istockphoto.com/photos/digital-camera-picture-id182508808?
 
 INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
 VALUES('https://media.istockphoto.com/photos/nikon-d5100-camera-with-35mm-lens-picture-id458565153?k=20&m=458565153&s=612x612&w=0&h=UjqW18DYXX_j4aNb4VTcdRVd2XPTg9Td_y8BGPmbRZE=',
-'Cameras', 499.99, 'Professional Grade DSLR Camera w/ 35mm Lens', 'Nikon DSLR D5100 Camera', 25, FALSE, 'LSLRBYC915BSA57XBAEH7B3');
+'Cameras', 499.99, 'Professional DSLR Camera w/ 35mm Lens', 'Nikon DSLR D5100 Camera', 25, FALSE, 'LSLRBYC915BSA57XBAEH7B3');
 
 INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
 VALUES('https://media.istockphoto.com/photos/january-10-2017-bose-quietcomfort-35-picture-id639837434?k=20&m=639837434&s=612x612&w=0&h=X_a0EfIif7sIK5AxwpKAyIcHjT1mKEpV4FTzcSbHt_Y=',
@@ -76,7 +76,7 @@ VALUES('https://media.istockphoto.com/photos/white-screen-led-tv-television-isol
 
 INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
 VALUES('https://media.istockphoto.com/photos/curved-smart-tv-on-white-reflective-background-picture-id915089902?k=20&m=915089902&s=612x612&w=0&h=JK87Y3WBhZQhdepIypI4sbUpdXD-g4M4mfmHcbVUO_U=',
-'TV & Video', 999.99, 'Latest Model - UHD7500 Series', '75" Samsung 4K UHD Smart Curved TV', 40, FALSE, 'E5344H84KA61ER687B3R3KC');
+'TV & Video', 999.99, 'Latest Model - UHD7500 Series', '75" Samsung 4K UHD Curved TV', 40, FALSE, 'E5344H84KA61ER687B3R3KC');
 
 INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
 VALUES('https://media.istockphoto.com/photos/freestanding-computer-widescreen-picture-id175471094?k=20&m=175471094&s=612x612&w=0&h=MVtmPMWnSKbHjp_TP_wTIn2hOka1n4ZLlMlAhAYfrKo=',
