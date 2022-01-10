@@ -15,7 +15,7 @@ public class CartController {
     @Autowired
     CartServiceImpl cartService;
 
-    @PostMapping
+    @PostMapping("post")
     ResponseEntity<CartPojo> addCart(@RequestBody CartPojo cart) throws ApplicationException {
         return ResponseEntity.ok()
                 .header("Content-type", "application/json")
@@ -23,7 +23,7 @@ public class CartController {
 
     }
 
-    @PutMapping
+    @PutMapping("put")
     ResponseEntity<CartPojo> updateCart(@RequestBody CartPojo cart) throws ApplicationException {
         return ResponseEntity.ok()
                 .header("Content-type", "application/json")
