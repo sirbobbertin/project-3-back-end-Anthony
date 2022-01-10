@@ -2,8 +2,8 @@ package com.project3.revtech.service;
 
 import com.project3.revtech.dao.DiscountRepository;
 import com.project3.revtech.dao.ProductRepository;
-import com.project3.revtech.controller.entity.Discount;
-import com.project3.revtech.controller.entity.Product;
+import com.project3.revtech.entity.Discount;
+import com.project3.revtech.entity.Product;
 import com.project3.revtech.exception.ApplicationException;
 import com.project3.revtech.joinedPojo.ProductAndDiscountPojo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,7 +60,7 @@ public class ProductDiscountServiceImpl  implements ProductDiscountService{
         Product getAnewProduct = productRepository.getById(productId);
 
         //discount
-        Discount discountedProduct = getAnewProduct.getDiscount();
+        Discount discountedProduct = (getAnewProduct.getDiscount() == null ? new Discount(true) : getAnewProduct.getDiscount());
 
         //create a new product & a  DiscountPojo
         ProductAndDiscountPojo newProdDiscPojo = new ProductAndDiscountPojo(
