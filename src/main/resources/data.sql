@@ -75,8 +75,8 @@ VALUES('https://media.istockphoto.com/photos/white-screen-led-tv-television-isol
 'TV & Video', 799.99, 'Latest Model - UHD6500 Series', '65" Samsung 4K UHD Smart TV', 40, FALSE, '3KKIY6RX3H76YI8912KH7R2');
 
 INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
-VALUES('https://media.istockphoto.com/photos/curved-smart-tv-on-white-reflective-background-picture-id915089902?k=20&m=915089902&s=612x612&w=0&h=JK87Y3WBhZQhdepIypI4sbUpdXD-g4M4mfmHcbVUO_U=',
-'TV & Video', 999.99, 'Latest Model - UHD7500 Series', '75" Samsung 4K UHD Curved TV', 40, FALSE, 'E5344H84KA61ER687B3R3KC');
+VALUES('https://media.istockphoto.com/photos/curved-tv-isolated-on-white-picture-id614142568?k=20&m=614142568&s=612x612&w=0&h=Mxjsv8xGggmlB4a463UdURZDRYNLjv4o6_5wpEaDN24=',
+'TV & Video', 649.99, 'Latest Model - UHD5500 Series', '55" Samsung 4K UHD Curved TV', 40, FALSE, 'E5344H84KA61ER687B3R3KC');
 
 INSERT INTO product_details(image_url, product_category, product_cost, product_description, product_name, product_qty, product_removed, product_sku)
 VALUES('https://media.istockphoto.com/photos/freestanding-computer-widescreen-picture-id175471094?k=20&m=175471094&s=612x612&w=0&h=MVtmPMWnSKbHjp_TP_wTIn2hOka1n4ZLlMlAhAYfrKo=',
