@@ -7,6 +7,7 @@ import com.project3.revtech.entity.Product;
 import com.project3.revtech.joinedPojo.CartAndItemsPojo;
 import com.project3.revtech.joinedPojo.ItemProductDiscountPojo;
 import com.project3.revtech.joinedPojo.ProductAndDiscountPojo;
+import com.project3.revtech.pojo.CartItemPojo;
 import com.project3.revtech.pojo.CartPojo;
 
 import java.math.BigDecimal;
@@ -40,9 +41,17 @@ public class CartAndItemsPojoPrototype {
 
     public static CartItem cartItemTestObj() {
         CartItem item = new CartItem(1, 1, 1, 3);
+        System.out.println("testing cart item");
+        System.out.println(item.getCartItemId());
         item.setProduct(productTestObj());
         return item;
     }
+
+    public static CartItemPojo cartItemPojoTestObj() {
+        CartItemPojo item = new CartItemPojo(1, 1, 1, 3);
+        return item;
+    }
+
 
     public static Product productTestObj() {
         Product product = new Product(  1, "12345", "iphone",

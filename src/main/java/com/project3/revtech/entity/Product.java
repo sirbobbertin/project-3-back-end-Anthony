@@ -137,8 +137,8 @@ public class Product {
 	@OneToOne(mappedBy = "product")
 	private Discount discount;
 
-	@OneToOne(mappedBy = "product")
-	private PurchasedItem purchasedItem;
+	@OneToMany(mappedBy = "product")
+	private List<PurchasedItem> purchasedItem;
 
 	@NotNull
 	@Column(name = "product_sku")

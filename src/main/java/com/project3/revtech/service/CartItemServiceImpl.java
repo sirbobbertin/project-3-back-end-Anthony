@@ -2,10 +2,8 @@ package com.project3.revtech.service;
 
 import com.project3.revtech.dao.CartItemRepository;
 import com.project3.revtech.entity.CartItem;
-import com.project3.revtech.entity.PurchasedItem;
 import com.project3.revtech.exception.ApplicationException;
 import com.project3.revtech.pojo.CartItemPojo;
-import com.project3.revtech.pojo.PurchasedItemPojo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -66,16 +64,6 @@ public class CartItemServiceImpl implements CartItemService{
 //        List<CartItemPojo> returningItems = new ArrayList<CartItemPojo>();
 //        List<CartItem> allItems = cartItemRepository.findAllByCartId(cartId);
 //        for()
-        return null;
-    }
-
-    @Override
-    public List<PurchasedItemPojo> getAllPurchasedItemsOfCart(int cartId, int transactionId) throws ApplicationException {
-        List<PurchasedItemPojo> returningItems = new ArrayList<PurchasedItemPojo>();
-        List<CartItem> allItems = cartItemRepository.findAllByCartId(cartId);
-        for(CartItem item : allItems) {
-            PurchasedItemPojo temp = new PurchasedItemPojo();
-        }
         return null;
     }
 

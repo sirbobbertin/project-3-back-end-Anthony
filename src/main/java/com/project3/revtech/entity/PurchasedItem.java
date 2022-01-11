@@ -42,7 +42,7 @@ public class PurchasedItem {
     @JoinColumn(name = "transaction_id", nullable = false, insertable = false, updatable = false)
     private Transaction transaction;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id", nullable = false, insertable = false, updatable = false)
     private Product product;
 

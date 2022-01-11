@@ -15,4 +15,9 @@ public class TransactionPrototype {
         TransactionPojo newTransactionPojo = new TransactionPojo(testEntity.getTransactionId(), testEntity.getTransactionDate(), testEntity.getCartId());
         return newTransactionPojo;
     }
+
+    public static TransactionPojo transactionPojoTestObj() {
+        TransactionPojo newTransactionPojo = new TransactionPojo(1, new Timestamp(System.currentTimeMillis()), 1);
+        return newTransactionPojo;
+    }
 }

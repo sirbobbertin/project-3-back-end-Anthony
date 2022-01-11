@@ -14,7 +14,6 @@ public interface CartItemService {
     CartItemPojo updateItem(CartItemPojo item) throws ApplicationException;
     CartItemPojo getCartItem(int item) throws ApplicationException;
     List<CartItemPojo> getAllItemsOfCart(int cartId) throws ApplicationException;
-    List<PurchasedItemPojo> getAllPurchasedItemsOfCart(int cartId, int transactionId) throws ApplicationException;
     boolean removeItem(int itemId) throws ApplicationException;
     boolean checkIfExistsInCart(int cartId, int productId) throws ApplicationException;
     boolean checkIfNoQty(int cartId, int productId) throws ApplicationException;

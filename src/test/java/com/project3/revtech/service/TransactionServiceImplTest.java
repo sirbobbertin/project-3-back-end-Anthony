@@ -12,7 +12,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static com.project3.revtech.prototype.TransactionPrototype.transactionPojoTestObj;
 import static com.project3.revtech.prototype.TransactionPrototype.transactionTestObj;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
@@ -32,12 +34,18 @@ class TransactionServiceImplTest {
         when(transactionRepository.getById(eq(1))).thenReturn(transactionEntity);
         TransactionPojo transactionPojo = transactionService.getTransactionById(1);
         assertNotNull(transactionPojo);
-        assertEquals(transactionPojoTestObj(transactionEntity).toString(), transactionPojo.toString());
+        assertEquals(transactionPojoTestObj(transactionEntity), transactionPojo);
     }
 
-//    @Test
-//    void createTransaction() {
-//
-//    }
+    @Test
+    void createTransaction() {
+        Transaction testEntity = transactionTestObj();
+        TransactionPojo testPojo = transactionPojoTestObj();
+        when(transactionRepository.saveAndFlush((Transaction) any())).thenReturn(testEntity);
+        TransactionPojo item = transactionService.createTransaction(testPojo);
+        assertNotNull(item);
+        assertEquals(testPojo, item);
+
+    }
 
 }
