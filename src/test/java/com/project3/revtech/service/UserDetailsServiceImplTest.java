@@ -11,6 +11,8 @@ import com.project3.revtech.dao.UserRepository;
 import com.project3.revtech.entity.ERole;
 import com.project3.revtech.entity.Role;
 import com.project3.revtech.entity.User;
+import com.project3.revtech.security.service.UserDetailsImpl;
+import com.project3.revtech.security.service.UserDetailsServiceImpl;
 
 import java.util.Collection;
 
