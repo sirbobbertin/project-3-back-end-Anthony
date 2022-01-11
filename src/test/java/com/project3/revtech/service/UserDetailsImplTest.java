@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import com.project3.revtech.entity.ERole;
 import com.project3.revtech.entity.Role;
 import com.project3.revtech.entity.User;
+import com.project3.revtech.security.service.UserDetailsImpl;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -15,7 +16,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 
-import com.project3.revtech.security.service.UserDetailsImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.security.core.GrantedAuthority;
 
