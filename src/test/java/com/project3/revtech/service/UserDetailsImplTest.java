@@ -1,4 +1,4 @@
-package com.project3.revtech.security.service;
+package com.project3.revtech.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import com.project3.revtech.entity.ERole;
 import com.project3.revtech.entity.Role;
 import com.project3.revtech.entity.User;
+import com.project3.revtech.security.service.UserDetailsImpl;
 
 import java.util.ArrayList;
 import java.util.Collection;
