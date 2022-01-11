@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import com.project3.revtech.entity.ERole;
 import com.project3.revtech.entity.Role;
 import com.project3.revtech.entity.User;
-import com.project3.revtech.service.UserDetailsImpl;
 
 import java.util.ArrayList;
 import java.util.Collection;
