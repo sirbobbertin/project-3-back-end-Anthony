@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
-import com.project3.revtech.security.service.UserDetailsImpl;
+import com.project3.revtech.service.UserDetailsImpl;
 import io.jsonwebtoken.*;
 
 @Component

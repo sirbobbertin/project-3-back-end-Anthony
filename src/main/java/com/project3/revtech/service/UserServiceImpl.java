@@ -24,9 +24,9 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserPojo updateUserService(UserPojo userInfo) throws ApplicationException {
 	
-		 User updateUser = new User(userInfo.getUser_id(), userInfo.getUsername(), encoder.encode(userInfo.getPassword()), userInfo.getEmail(), userInfo.getFirst_name(), userInfo.getLast_name(),
-				                    userInfo.getAddress(), userInfo.getContact());
-		User  returnUser = userRepositoryDao.save(updateUser);
+//		 User updateUser = new User(userInfo.getUser_id(), userInfo.getUsername(), encoder.encode(userInfo.getPassword()), userInfo.getEmail(), userInfo.getFirstName(), userInfo.getLastName(),
+//				                    userInfo.getAddress(), userInfo.getContact());
+//		User  returnUser = userRepositoryDao.save(updateUser);
 				
 		return userInfo;
 }
