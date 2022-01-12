@@ -77,7 +77,7 @@ To-do list:
 * git clone `https://github.com/revature-rev-tech/project-3-front-end-beta.git`
 
 ## Entity Relationship Diagram
-![ERD Image](https://i.postimg.cc/gjd6NK4h/ERD.png)
+![ERD Image](https://i.postimg.cc/q75nz3yn/image.png)
 
 ## File Structure
 Within the download you'll find the following directories and files:
