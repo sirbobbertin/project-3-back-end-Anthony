@@ -23,7 +23,6 @@ public class ProductController {
     //@PostMapping(value = "products")
     //For Rowel Team Product -  JWT Specific Mapping
     @PostMapping(value = "products/add")
-    @PreAuthorize("hasRole('ADMIN')")
     // http://localhost:7777/api/products/add
     ProductPojo  addProduct(@Valid @RequestBody ProductPojo productPojo) throws ApplicationException{
         return  productService.addProductService(productPojo);
@@ -43,7 +42,6 @@ public class ProductController {
     // @DeleteMapping("products/{pid}")
     //For Rowel Team Product - JWT Specific Mapping
     @DeleteMapping("products/delete/{pid}")
-    @PreAuthorize("hasRole('ADMIN')")
     boolean deleteProduct(@PathVariable("pid") int productId) throws ApplicationException{
         return productService.deleteProductService(productId);
     }
