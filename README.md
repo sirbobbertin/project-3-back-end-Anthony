@@ -53,7 +53,7 @@ List of features ready and TODOs for future development
 * Ability to login as an customer or administrator
 * Ability to view appropriate interfaces upon login dependent upon level of access (admin or customer)
 * Ability to add a product to storefront as an administrator
-* Ablity to add a discounted product to storefront as an administrator
+* Ability to add a discounted product to storefront as an administrator
 * Ability to update or remove a product from storefront as an administrator
 * Ability to update or remove a discounted product from storefront as an administrator
 * Ability to view account information as a user
@@ -64,12 +64,12 @@ List of features ready and TODOs for future development
 * Ability to select quantity of a particular item to add to cart as a user
 * Ability to checkout as a user
 * Ability to logout as a user
+* Ability to add and view customer reviews as a user
+* Ability to view orders history as a user
 
 To-do list:
 * Ability to update account information as a user
 * Ability to add items and checkout instantly (buy now) as a user
-* Ability to add and view customer reviews as a user
-* Ability to view orders history as a user
 * Ability to contact customer support (live chat)
 
 ## Getting Started
