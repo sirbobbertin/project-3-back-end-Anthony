@@ -34,7 +34,6 @@ public class ProductController {
     //@PutMapping("products/{pid}")
     //For Rowel Team Product - JWT Specific Mapping
     @PutMapping("products/update/{pid}")
-    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     ProductPojo updateProduct(@Valid @RequestBody ProductPojo productPojo) throws ApplicationException {
         return productService.updateProductService(productPojo);
     }
