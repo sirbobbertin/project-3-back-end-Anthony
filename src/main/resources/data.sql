@@ -1,20 +1,11 @@
 INSERT INTO roles(name)
-VALUES('ROLE_USER');
-
-INSERT INTO roles(name)
 VALUES('ROLE_ADMIN');
 
 INSERT INTO user_roles(uid, role_id)
 VALUES(1, 2);
 
-INSERT INTO user_roles(uid, role_id)
-VALUES(2, 1);
-
 INSERT INTO user_details(user_id, email, username, password, first_name, last_name, address, contact)
 VALUES(1 ,'admin@example.com', 'admin', '$2a$10$MPZozc4ZGXGAPYfcahvwZusPR9opwnWomMoIXYFB0Dk6hpdi0ZCde', 'John', 'Doe', '35 Enterprise Ln, Los Angeles, CA 90001','555-222-5555');
-
-INSERT INTO user_details(user_id, email, username, password, first_name, last_name, address, contact)
-VALUES(2, 'customer@example.com', 'customer', '$2a$10$KgNaOf.aVTq7oiig9Wq6vuYlvz09H34Vb0FIUOr/cBhJaYESRYgGm', 'Jane', 'Doe', '101 Consumer Ln, Los Angeles, CA 90001','555-222-9999');
 
 -- #------- PRODUCT DATA --------
 
