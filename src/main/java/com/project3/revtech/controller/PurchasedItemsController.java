@@ -19,19 +19,16 @@ public class PurchasedItemsController {
     PurchasedItemService purchasedItemService;
 
     @PostMapping("many/post")
-    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     boolean addManyItems(@RequestBody ArrayList<PurchasedItemPojo> items) {
         return purchasedItemService.addMultipleItems(items);
     }
 
     @GetMapping("transaction/{bid}/get")
-    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     List<PurchasedItemProduct> getItemsByTransactionId(@PathVariable("bid") int transactionId) {
         return purchasedItemService.getAllPurchasedProductsByTransactionId(transactionId);
     }
 
     @GetMapping("user/{bid}/get")
-    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     List<PurchasedItemProduct> getItemsByUserId(@PathVariable("bid") int userId) {
         return purchasedItemService.getAllPurchasedProductsByUserId(userId);
     }
