@@ -1,4 +1,4 @@
-package com.project3.revtech.security.service;
+package com.project3.revtech.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;

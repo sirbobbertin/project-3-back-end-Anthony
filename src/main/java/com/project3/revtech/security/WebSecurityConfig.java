@@ -19,7 +19,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import com.project3.revtech.security.jwt.AuthEntryPointJwt;
 import com.project3.revtech.security.jwt.AuthTokenFilter;
-import com.project3.revtech.security.service.UserDetailsServiceImpl;
+import com.project3.revtech.service.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity
@@ -82,15 +82,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
       .authorizeRequests().antMatchers("/discount/all/discountedProducts/**").permitAll().and()
       .authorizeRequests().antMatchers("/api/products/add/**").permitAll().and()
       .authorizeRequests().antMatchers("/api/transaction").permitAll().and()
-      .authorizeRequests().antMatchers("/api/transaction/**").permitAll().and()
+       .authorizeRequests().antMatchers("/api/transaction/**").permitAll().and()
+       .authorizeRequests().antMatchers("/api/purchased-items/**").permitAll().and()
+       .authorizeRequests().antMatchers("/api/reviews/**").permitAll().and()
       .authorizeRequests().antMatchers("/api/cart-items").permitAll().and()
       .authorizeRequests().antMatchers("/api/cart-items/**").permitAll().and()
       .authorizeRequests().antMatchers("/file").permitAll().and()
       .authorizeRequests().antMatchers("/file/**").permitAll().and()
       .authorizeRequests().antMatchers("/api/cart-and-items").permitAll().and()
       .authorizeRequests().antMatchers("/api/cart-and-items/**").permitAll().and()
-               .authorizeRequests().antMatchers("/api/cart").permitAll().and()
-               .authorizeRequests().antMatchers("/api/cart/**").permitAll().and()
+       .authorizeRequests().antMatchers("/api/cart").permitAll().and()
+       .authorizeRequests().antMatchers("/api/cart/**").permitAll().and()
       .authorizeRequests().antMatchers("/combined/Disc/Products").permitAll().and()
       .authorizeRequests().antMatchers("/api/test/**").permitAll().and()
       .authorizeRequests().antMatchers("/cart/{bid}").permitAll().and()

@@ -53,7 +53,7 @@ List of features ready and TODOs for future development
 * Ability to login as an customer or administrator
 * Ability to view appropriate interfaces upon login dependent upon level of access (admin or customer)
 * Ability to add a product to storefront as an administrator
-* Ablity to add a discounted product to storefront as an administrator
+* Ability to add a discounted product to storefront as an administrator
 * Ability to update or remove a product from storefront as an administrator
 * Ability to update or remove a discounted product from storefront as an administrator
 * Ability to view account information as a user
@@ -64,12 +64,12 @@ List of features ready and TODOs for future development
 * Ability to select quantity of a particular item to add to cart as a user
 * Ability to checkout as a user
 * Ability to logout as a user
+* Ability to add and view customer reviews as a user
+* Ability to view orders history as a user
 
 To-do list:
 * Ability to update account information as a user
 * Ability to add items and checkout instantly (buy now) as a user
-* Ability to add and view customer reviews as a user
-* Ability to view orders history as a user
 * Ability to contact customer support (live chat)
 
 ## Getting Started
@@ -77,7 +77,7 @@ To-do list:
 * git clone `https://github.com/revature-rev-tech/project-3-front-end-beta.git`
 
 ## Entity Relationship Diagram
-![ERD Image](https://i.postimg.cc/gjd6NK4h/ERD.png)
+![ERD Image](https://i.postimg.cc/q75nz3yn/image.png)
 
 ## File Structure
 Within the download you'll find the following directories and files:
@@ -197,3 +197,4 @@ Scrum Master: Michelle Ng
 Team Leads: Rowel Selidio, James Lemaire, Aimen Altaiyeb
 
 Team Members: Derrice Wright, Tulika Ghosh, Anthony Johnson, Austin Noel, Tareeq Hamilton, Sameh Botros
+
